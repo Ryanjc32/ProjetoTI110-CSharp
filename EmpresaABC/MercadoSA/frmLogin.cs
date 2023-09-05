@@ -16,5 +16,17 @@ namespace MercadoSA
         {
             InitializeComponent();
         }
+
+        private void btmSair_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btmEntrar_Click(object sender, EventArgs e)
+        {
+            frmMenuPrincipal abrir = new frmMenuPrincipal();
+            abrir.Show();
+            this.Hide();
+        }
     }
 }

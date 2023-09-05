@@ -9,3 +9,5 @@ C:\Users\ryan.jcavalcanti\Documents\Visual Studio 2019\ProjetoTI110\EmpresaABC\M
 C:\Users\ryan.jcavalcanti\Documents\Visual Studio 2019\ProjetoTI110\EmpresaABC\MercadoSA\obj\x64\Debug\MercadoSA.csproj.CoreCompileInputs.cache
 C:\Users\ryan.jcavalcanti\Documents\Visual Studio 2019\ProjetoTI110\EmpresaABC\MercadoSA\obj\x64\Debug\MercadoSA.exe
 C:\Users\ryan.jcavalcanti\Documents\Visual Studio 2019\ProjetoTI110\EmpresaABC\MercadoSA\obj\x64\Debug\MercadoSA.pdb
+C:\Users\ryan.jcavalcanti\Documents\Visual Studio 2019\ProjetoTI110\EmpresaABC\MercadoSA\obj\x64\Debug\MercadoSA.frmLogin.resources
+C:\Users\ryan.jcavalcanti\Documents\Visual Studio 2019\ProjetoTI110\EmpresaABC\MercadoSA\obj\x64\Debug\MercadoSA.frmMenuPrincipal.resources
