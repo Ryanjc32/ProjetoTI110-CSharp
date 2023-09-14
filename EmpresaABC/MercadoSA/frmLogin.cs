@@ -1,4 +1,6 @@
-﻿using System;
+﻿//biblioteca do csharp
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,13 +10,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace MercadoSA
 {
     public partial class frmLogin : Form
     {
         public frmLogin()
         {
-            InitializeComponent();
+            InitializeComponent();       
         }
 
         private void btmSair_Click(object sender, EventArgs e)
@@ -24,9 +27,18 @@ namespace MercadoSA
 
         private void btmEntrar_Click(object sender, EventArgs e)
         {
-            frmMenuPrincipal abrir = new frmMenuPrincipal();
-            abrir.Show();
-            this.Hide();
+            //frmMenuPrincipal abrir = new frmMenuPrincipal();
+            //abrir.Show();
+            //this.Hide();
+
+            //declaração das variáveis
+            string usuario, senha;
+
+            //inicializar as variáveis
+            usuario = txtUsuario.Text;
+            senha = txtSenha.Text;
+
+
         }
     }
 }

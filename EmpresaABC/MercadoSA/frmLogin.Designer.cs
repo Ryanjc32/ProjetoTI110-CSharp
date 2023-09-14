@@ -63,7 +63,7 @@ namespace MercadoSA
             // txtUsuario
             // 
             this.txtUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsuario.Location = new System.Drawing.Point(260, 183);
+            this.txtUsuario.Location = new System.Drawing.Point(264, 177);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(214, 26);
             this.txtUsuario.TabIndex = 0;
@@ -96,7 +96,6 @@ namespace MercadoSA
             this.btmSair.TabIndex = 5;
             this.btmSair.Text = "Sair";
             this.btmSair.UseVisualStyleBackColor = true;
-            this.btmSair.Click += new System.EventHandler(this.btmSair_Click);
             // 
             // btmEntrar
             // 
@@ -107,7 +106,6 @@ namespace MercadoSA
             this.btmEntrar.TabIndex = 6;
             this.btmEntrar.Text = "&Entrar";
             this.btmEntrar.UseVisualStyleBackColor = true;
-            this.btmEntrar.Click += new System.EventHandler(this.btmEntrar_Click);
             // 
             // frmLogin
             // 

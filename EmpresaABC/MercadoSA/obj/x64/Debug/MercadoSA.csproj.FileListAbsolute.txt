@@ -11,3 +11,4 @@ C:\Users\ryan.jcavalcanti\Documents\Visual Studio 2019\ProjetoTI110\EmpresaABC\M
 C:\Users\ryan.jcavalcanti\Documents\Visual Studio 2019\ProjetoTI110\EmpresaABC\MercadoSA\obj\x64\Debug\MercadoSA.pdb
 C:\Users\ryan.jcavalcanti\Documents\Visual Studio 2019\ProjetoTI110\EmpresaABC\MercadoSA\obj\x64\Debug\MercadoSA.frmLogin.resources
 C:\Users\ryan.jcavalcanti\Documents\Visual Studio 2019\ProjetoTI110\EmpresaABC\MercadoSA\obj\x64\Debug\MercadoSA.frmMenuPrincipal.resources
+C:\Users\ryan.jcavalcanti\Documents\Visual Studio 2019\ProjetoTI110\EmpresaABC\MercadoSA\obj\x64\Debug\MercadoSA.frmCalculadora.resources
