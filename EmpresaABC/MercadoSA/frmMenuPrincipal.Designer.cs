@@ -62,7 +62,7 @@ namespace MercadoSA
             this.btmVendas.Text = "&Vendas";
             this.btmVendas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btmVendas.UseVisualStyleBackColor = true;
-            this.btmVendas.Click += new System.EventHandler(this.button2_Click);
+         
             // 
             // btmClientes
             // 
@@ -87,7 +87,7 @@ namespace MercadoSA
             this.btmUsuarios.Text = "&Usuários";
             this.btmUsuarios.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btmUsuarios.UseVisualStyleBackColor = true;
-            this.btmUsuarios.Click += new System.EventHandler(this.button4_Click_1);
+            
             // 
             // btmFornecedores
             // 

@@ -10,18 +10,11 @@ using System.Windows.Forms;
 
 namespace MercadoSA
 {
-    public partial class frmMenuPrincipal : Form
+    public partial class frmFuncinarios : Form
     {
-        public frmMenuPrincipal()
+        public frmFuncinarios()
         {
             InitializeComponent();
-        }
-
-        private void btmVoltar_Click(object sender, EventArgs e)
-        {
-            frmLogin abrir = new frmLogin();
-            abrir.Show();
-            this.Hide();
         }
     }
 }

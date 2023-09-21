@@ -37,10 +37,10 @@ namespace MercadoSA
             this.btnLimpar = new System.Windows.Forms.Button();
             this.btnSair = new System.Windows.Forms.Button();
             this.gpOperador = new System.Windows.Forms.GroupBox();
-            this.rdbAdicao = new System.Windows.Forms.RadioButton();
-            this.rdbSubtracao = new System.Windows.Forms.RadioButton();
-            this.rdbMultiplicacao = new System.Windows.Forms.RadioButton();
             this.rdbDivisao = new System.Windows.Forms.RadioButton();
+            this.rdbMultiplicacao = new System.Windows.Forms.RadioButton();
+            this.rdbSubtracao = new System.Windows.Forms.RadioButton();
+            this.rdbAdicao = new System.Windows.Forms.RadioButton();
             this.lblResultado = new System.Windows.Forms.Label();
             this.txtVariavel1 = new System.Windows.Forms.TextBox();
             this.txtVariavel2 = new System.Windows.Forms.TextBox();
@@ -50,6 +50,7 @@ namespace MercadoSA
             // lblVariavel1
             // 
             this.lblVariavel1.AutoSize = true;
+            this.lblVariavel1.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.lblVariavel1.Location = new System.Drawing.Point(78, 53);
             this.lblVariavel1.Name = "lblVariavel1";
             this.lblVariavel1.Size = new System.Drawing.Size(54, 13);
@@ -59,6 +60,7 @@ namespace MercadoSA
             // lblVariavel2
             // 
             this.lblVariavel2.AutoSize = true;
+            this.lblVariavel2.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.lblVariavel2.Location = new System.Drawing.Point(78, 181);
             this.lblVariavel2.Name = "lblVariavel2";
             this.lblVariavel2.Size = new System.Drawing.Size(54, 13);
@@ -68,6 +70,7 @@ namespace MercadoSA
             // lbtTitResultado
             // 
             this.lbtTitResultado.AutoSize = true;
+            this.lbtTitResultado.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lbtTitResultado.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lbtTitResultado.Location = new System.Drawing.Point(646, 53);
             this.lbtTitResultado.Name = "lbtTitResultado";
@@ -95,6 +98,7 @@ namespace MercadoSA
             this.btnLimpar.TabIndex = 8;
             this.btnLimpar.Text = "Limpar";
             this.btnLimpar.UseVisualStyleBackColor = false;
+            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
             // 
             // btnSair
             // 
@@ -109,43 +113,30 @@ namespace MercadoSA
             // 
             // gpOperador
             // 
+            this.gpOperador.BackColor = System.Drawing.Color.Silver;
             this.gpOperador.Controls.Add(this.rdbDivisao);
             this.gpOperador.Controls.Add(this.rdbMultiplicacao);
             this.gpOperador.Controls.Add(this.rdbSubtracao);
             this.gpOperador.Controls.Add(this.rdbAdicao);
             this.gpOperador.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gpOperador.Location = new System.Drawing.Point(278, 147);
+            this.gpOperador.Location = new System.Drawing.Point(289, 165);
             this.gpOperador.Name = "gpOperador";
             this.gpOperador.Size = new System.Drawing.Size(223, 274);
             this.gpOperador.TabIndex = 6;
             this.gpOperador.TabStop = false;
             this.gpOperador.Text = "Operadorações";
             // 
-            // rdbAdicao
+            // rdbDivisao
             // 
-            this.rdbAdicao.AutoSize = true;
-            this.rdbAdicao.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.rdbAdicao.Location = new System.Drawing.Point(15, 28);
-            this.rdbAdicao.Name = "rdbAdicao";
-            this.rdbAdicao.Size = new System.Drawing.Size(94, 22);
-            this.rdbAdicao.TabIndex = 2;
-            this.rdbAdicao.TabStop = true;
-            this.rdbAdicao.Text = "Adição (+)";
-            this.rdbAdicao.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.rdbAdicao.UseVisualStyleBackColor = true;
-            // 
-            // rdbSubtracao
-            // 
-            this.rdbSubtracao.AutoSize = true;
-            this.rdbSubtracao.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.rdbSubtracao.Location = new System.Drawing.Point(15, 75);
-            this.rdbSubtracao.Name = "rdbSubtracao";
-            this.rdbSubtracao.Size = new System.Drawing.Size(113, 22);
-            this.rdbSubtracao.TabIndex = 3;
-            this.rdbSubtracao.TabStop = true;
-            this.rdbSubtracao.Text = "Subtração (-)";
-            this.rdbSubtracao.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.rdbSubtracao.UseVisualStyleBackColor = true;
+            this.rdbDivisao.AutoSize = true;
+            this.rdbDivisao.Location = new System.Drawing.Point(16, 159);
+            this.rdbDivisao.Name = "rdbDivisao";
+            this.rdbDivisao.Size = new System.Drawing.Size(93, 22);
+            this.rdbDivisao.TabIndex = 5;
+            this.rdbDivisao.TabStop = true;
+            this.rdbDivisao.Text = "Divisão (/)";
+            this.rdbDivisao.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.rdbDivisao.UseVisualStyleBackColor = true;
             // 
             // rdbMultiplicacao
             // 
@@ -160,17 +151,31 @@ namespace MercadoSA
             this.rdbMultiplicacao.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.rdbMultiplicacao.UseVisualStyleBackColor = true;
             // 
-            // rdbDivisao
+            // rdbSubtracao
             // 
-            this.rdbDivisao.AutoSize = true;
-            this.rdbDivisao.Location = new System.Drawing.Point(16, 159);
-            this.rdbDivisao.Name = "rdbDivisao";
-            this.rdbDivisao.Size = new System.Drawing.Size(93, 22);
-            this.rdbDivisao.TabIndex = 5;
-            this.rdbDivisao.TabStop = true;
-            this.rdbDivisao.Text = "Divisão (/)";
-            this.rdbDivisao.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.rdbDivisao.UseVisualStyleBackColor = true;
+            this.rdbSubtracao.AutoSize = true;
+            this.rdbSubtracao.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.rdbSubtracao.Location = new System.Drawing.Point(15, 75);
+            this.rdbSubtracao.Name = "rdbSubtracao";
+            this.rdbSubtracao.Size = new System.Drawing.Size(113, 22);
+            this.rdbSubtracao.TabIndex = 3;
+            this.rdbSubtracao.TabStop = true;
+            this.rdbSubtracao.Text = "Subtração (-)";
+            this.rdbSubtracao.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.rdbSubtracao.UseVisualStyleBackColor = true;
+            // 
+            // rdbAdicao
+            // 
+            this.rdbAdicao.AutoSize = true;
+            this.rdbAdicao.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.rdbAdicao.Location = new System.Drawing.Point(15, 28);
+            this.rdbAdicao.Name = "rdbAdicao";
+            this.rdbAdicao.Size = new System.Drawing.Size(94, 22);
+            this.rdbAdicao.TabIndex = 2;
+            this.rdbAdicao.TabStop = true;
+            this.rdbAdicao.Text = "Adição (+)";
+            this.rdbAdicao.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.rdbAdicao.UseVisualStyleBackColor = true;
             // 
             // lblResultado
             // 
