@@ -129,6 +129,7 @@ namespace MercadoSA
             this.Name = "frmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LojaABC-login";
+            this.Load += new System.EventHandler(this.frmLogin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pctLogin)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

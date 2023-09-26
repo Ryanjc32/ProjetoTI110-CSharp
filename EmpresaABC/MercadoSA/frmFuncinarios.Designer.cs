@@ -31,39 +31,39 @@ namespace MercadoSA
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmFuncinarios));
             this.gpbFuncionario = new System.Windows.Forms.GroupBox();
-            this.lblCodigo = new System.Windows.Forms.Label();
-            this.txtCodigo = new System.Windows.Forms.TextBox();
-            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.lblNome = new System.Windows.Forms.Label();
-            this.txtNome = new System.Windows.Forms.TextBox();
-            this.lblCPF = new System.Windows.Forms.Label();
-            this.mskCPF = new System.Windows.Forms.MaskedTextBox();
-            this.lblDataDNascimento = new System.Windows.Forms.Label();
-            this.dtpDataDNascimento = new System.Windows.Forms.DateTimePicker();
-            this.txtEmail = new System.Windows.Forms.TextBox();
-            this.lblEmail = new System.Windows.Forms.Label();
-            this.txtEndereço = new System.Windows.Forms.TextBox();
-            this.lblEndereço = new System.Windows.Forms.Label();
-            this.mskCEP = new System.Windows.Forms.MaskedTextBox();
-            this.lblCEP = new System.Windows.Forms.Label();
-            this.txtNumero = new System.Windows.Forms.TextBox();
-            this.lblNumero = new System.Windows.Forms.Label();
+            this.txtCidade = new System.Windows.Forms.TextBox();
+            this.lblCidade = new System.Windows.Forms.Label();
+            this.cbbEstado = new System.Windows.Forms.ComboBox();
+            this.lblEstado = new System.Windows.Forms.Label();
             this.txtBairro = new System.Windows.Forms.TextBox();
             this.lblBairro = new System.Windows.Forms.Label();
-            this.lblEstado = new System.Windows.Forms.Label();
-            this.cbbEstado = new System.Windows.Forms.ComboBox();
-            this.lblCidade = new System.Windows.Forms.Label();
-            this.txtCidade = new System.Windows.Forms.TextBox();
+            this.txtNumero = new System.Windows.Forms.TextBox();
+            this.lblNumero = new System.Windows.Forms.Label();
+            this.mskCEP = new System.Windows.Forms.MaskedTextBox();
+            this.lblCEP = new System.Windows.Forms.Label();
+            this.txtEndereco = new System.Windows.Forms.TextBox();
+            this.lblEndereco = new System.Windows.Forms.Label();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.lblEmail = new System.Windows.Forms.Label();
+            this.dtpDataDNascimento = new System.Windows.Forms.DateTimePicker();
+            this.lblDataDNascimento = new System.Windows.Forms.Label();
+            this.mskCPF = new System.Windows.Forms.MaskedTextBox();
+            this.lblCPF = new System.Windows.Forms.Label();
+            this.txtNome = new System.Windows.Forms.TextBox();
+            this.lblNome = new System.Windows.Forms.Label();
+            this.txtCodigo = new System.Windows.Forms.TextBox();
+            this.lblCodigo = new System.Windows.Forms.Label();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.btnAlterar = new System.Windows.Forms.Button();
-            this.btnExcluir = new System.Windows.Forms.Button();
-            this.btnPesquisar = new System.Windows.Forms.Button();
-            this.btnLimapr = new System.Windows.Forms.Button();
             this.btnVoltar = new System.Windows.Forms.Button();
-            this.btnNovo = new System.Windows.Forms.Button();
+            this.btnLimpar = new System.Windows.Forms.Button();
+            this.btnPesquisar = new System.Windows.Forms.Button();
+            this.btnExcluir = new System.Windows.Forms.Button();
+            this.btnAlterar = new System.Windows.Forms.Button();
             this.btnCadastrar = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.btnNovo = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.gpbFuncionario.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -81,8 +81,8 @@ namespace MercadoSA
             this.gpbFuncionario.Controls.Add(this.lblNumero);
             this.gpbFuncionario.Controls.Add(this.mskCEP);
             this.gpbFuncionario.Controls.Add(this.lblCEP);
-            this.gpbFuncionario.Controls.Add(this.txtEndereço);
-            this.gpbFuncionario.Controls.Add(this.lblEndereço);
+            this.gpbFuncionario.Controls.Add(this.txtEndereco);
+            this.gpbFuncionario.Controls.Add(this.lblEndereco);
             this.gpbFuncionario.Controls.Add(this.txtEmail);
             this.gpbFuncionario.Controls.Add(this.lblEmail);
             this.gpbFuncionario.Controls.Add(this.dtpDataDNascimento);
@@ -101,145 +101,43 @@ namespace MercadoSA
             this.gpbFuncionario.TabStop = false;
             this.gpbFuncionario.Text = "Dados";
             // 
-            // lblCodigo
+            // txtCidade
             // 
-            this.lblCodigo.AutoSize = true;
-            this.lblCodigo.Location = new System.Drawing.Point(6, 35);
-            this.lblCodigo.Name = "lblCodigo";
-            this.lblCodigo.Size = new System.Drawing.Size(56, 18);
-            this.lblCodigo.TabIndex = 1;
-            this.lblCodigo.Text = "Código";
+            this.txtCidade.Location = new System.Drawing.Point(448, 175);
+            this.txtCidade.MaxLength = 100;
+            this.txtCidade.Name = "txtCidade";
+            this.txtCidade.Size = new System.Drawing.Size(94, 24);
+            this.txtCidade.TabIndex = 9;
             // 
-            // txtCodigo
+            // lblCidade
             // 
-            this.txtCodigo.Location = new System.Drawing.Point(68, 35);
-            this.txtCodigo.MaxLength = 5;
-            this.txtCodigo.Name = "txtCodigo";
-            this.txtCodigo.Size = new System.Drawing.Size(100, 24);
-            this.txtCodigo.TabIndex = 0;
+            this.lblCidade.AutoSize = true;
+            this.lblCidade.Location = new System.Drawing.Point(388, 181);
+            this.lblCidade.Name = "lblCidade";
+            this.lblCidade.Size = new System.Drawing.Size(54, 18);
+            this.lblCidade.TabIndex = 21;
+            this.lblCidade.Text = "Cidade";
             // 
-            // openFileDialog1
+            // cbbEstado
             // 
-            this.openFileDialog1.FileName = "openFileDialog1";
+            this.cbbEstado.FormattingEnabled = true;
+            this.cbbEstado.Items.AddRange(new object[] {
+            "SP",
+            "RJ",
+            "MT"});
+            this.cbbEstado.Location = new System.Drawing.Point(614, 171);
+            this.cbbEstado.Name = "cbbEstado";
+            this.cbbEstado.Size = new System.Drawing.Size(121, 26);
+            this.cbbEstado.TabIndex = 10;
             // 
-            // lblNome
+            // lblEstado
             // 
-            this.lblNome.AutoSize = true;
-            this.lblNome.Location = new System.Drawing.Point(6, 86);
-            this.lblNome.Name = "lblNome";
-            this.lblNome.Size = new System.Drawing.Size(49, 18);
-            this.lblNome.TabIndex = 3;
-            this.lblNome.Text = "Nome";
-            // 
-            // txtNome
-            // 
-            this.txtNome.Location = new System.Drawing.Point(68, 86);
-            this.txtNome.MaxLength = 100;
-            this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(224, 24);
-            this.txtNome.TabIndex = 1;
-            // 
-            // lblCPF
-            // 
-            this.lblCPF.AutoSize = true;
-            this.lblCPF.Location = new System.Drawing.Point(553, 89);
-            this.lblCPF.Name = "lblCPF";
-            this.lblCPF.Size = new System.Drawing.Size(38, 18);
-            this.lblCPF.TabIndex = 5;
-            this.lblCPF.Text = "CPF";
-            // 
-            // mskCPF
-            // 
-            this.mskCPF.Location = new System.Drawing.Point(598, 83);
-            this.mskCPF.Mask = "999,999,999-99";
-            this.mskCPF.Name = "mskCPF";
-            this.mskCPF.Size = new System.Drawing.Size(113, 24);
-            this.mskCPF.TabIndex = 3;
-            // 
-            // lblDataDNascimento
-            // 
-            this.lblDataDNascimento.AutoSize = true;
-            this.lblDataDNascimento.Location = new System.Drawing.Point(6, 129);
-            this.lblDataDNascimento.Name = "lblDataDNascimento";
-            this.lblDataDNascimento.Size = new System.Drawing.Size(143, 18);
-            this.lblDataDNascimento.TabIndex = 7;
-            this.lblDataDNascimento.Text = "Data de Nascimento";
-            // 
-            // dtpDataDNascimento
-            // 
-            this.dtpDataDNascimento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpDataDNascimento.Location = new System.Drawing.Point(155, 129);
-            this.dtpDataDNascimento.Name = "dtpDataDNascimento";
-            this.dtpDataDNascimento.Size = new System.Drawing.Size(112, 24);
-            this.dtpDataDNascimento.TabIndex = 4;
-            // 
-            // txtEmail
-            // 
-            this.txtEmail.Location = new System.Drawing.Point(380, 86);
-            this.txtEmail.MaxLength = 100;
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(147, 24);
-            this.txtEmail.TabIndex = 2;
-            // 
-            // lblEmail
-            // 
-            this.lblEmail.AutoSize = true;
-            this.lblEmail.Location = new System.Drawing.Point(321, 89);
-            this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(50, 18);
-            this.lblEmail.TabIndex = 9;
-            this.lblEmail.Text = "E-mail";
-            // 
-            // txtEndereço
-            // 
-            this.txtEndereço.Location = new System.Drawing.Point(380, 129);
-            this.txtEndereço.MaxLength = 100;
-            this.txtEndereço.Name = "txtEndereço";
-            this.txtEndereço.Size = new System.Drawing.Size(147, 24);
-            this.txtEndereço.TabIndex = 5;
-            // 
-            // lblEndereço
-            // 
-            this.lblEndereço.AutoSize = true;
-            this.lblEndereço.Location = new System.Drawing.Point(288, 129);
-            this.lblEndereço.Name = "lblEndereço";
-            this.lblEndereço.Size = new System.Drawing.Size(72, 18);
-            this.lblEndereço.TabIndex = 11;
-            this.lblEndereço.Text = "Endereço";
-            // 
-            // mskCEP
-            // 
-            this.mskCEP.Location = new System.Drawing.Point(598, 132);
-            this.mskCEP.Mask = "999999-999";
-            this.mskCEP.Name = "mskCEP";
-            this.mskCEP.Size = new System.Drawing.Size(100, 24);
-            this.mskCEP.TabIndex = 6;
-            // 
-            // lblCEP
-            // 
-            this.lblCEP.AutoSize = true;
-            this.lblCEP.Location = new System.Drawing.Point(552, 135);
-            this.lblCEP.Name = "lblCEP";
-            this.lblCEP.Size = new System.Drawing.Size(39, 18);
-            this.lblCEP.TabIndex = 13;
-            this.lblCEP.Text = "CEP";
-            // 
-            // txtNumero
-            // 
-            this.txtNumero.Location = new System.Drawing.Point(74, 176);
-            this.txtNumero.MaxLength = 10;
-            this.txtNumero.Name = "txtNumero";
-            this.txtNumero.Size = new System.Drawing.Size(94, 24);
-            this.txtNumero.TabIndex = 7;
-            // 
-            // lblNumero
-            // 
-            this.lblNumero.AutoSize = true;
-            this.lblNumero.Location = new System.Drawing.Point(6, 175);
-            this.lblNumero.Name = "lblNumero";
-            this.lblNumero.Size = new System.Drawing.Size(62, 18);
-            this.lblNumero.TabIndex = 15;
-            this.lblNumero.Text = "Número";
+            this.lblEstado.AutoSize = true;
+            this.lblEstado.Location = new System.Drawing.Point(553, 178);
+            this.lblEstado.Name = "lblEstado";
+            this.lblEstado.Size = new System.Drawing.Size(55, 18);
+            this.lblEstado.TabIndex = 19;
+            this.lblEstado.Text = "Estado";
             // 
             // txtBairro
             // 
@@ -258,49 +156,151 @@ namespace MercadoSA
             this.lblBairro.TabIndex = 17;
             this.lblBairro.Text = "Bairro";
             // 
-            // lblEstado
+            // txtNumero
             // 
-            this.lblEstado.AutoSize = true;
-            this.lblEstado.Location = new System.Drawing.Point(553, 178);
-            this.lblEstado.Name = "lblEstado";
-            this.lblEstado.Size = new System.Drawing.Size(55, 18);
-            this.lblEstado.TabIndex = 19;
-            this.lblEstado.Text = "Estado";
+            this.txtNumero.Location = new System.Drawing.Point(74, 176);
+            this.txtNumero.MaxLength = 10;
+            this.txtNumero.Name = "txtNumero";
+            this.txtNumero.Size = new System.Drawing.Size(94, 24);
+            this.txtNumero.TabIndex = 7;
             // 
-            // cbbEstado
+            // lblNumero
             // 
-            this.cbbEstado.FormattingEnabled = true;
-            this.cbbEstado.Items.AddRange(new object[] {
-            "SP",
-            "RJ",
-            "MT"});
-            this.cbbEstado.Location = new System.Drawing.Point(614, 171);
-            this.cbbEstado.Name = "cbbEstado";
-            this.cbbEstado.Size = new System.Drawing.Size(121, 26);
-            this.cbbEstado.TabIndex = 10;
+            this.lblNumero.AutoSize = true;
+            this.lblNumero.Location = new System.Drawing.Point(6, 175);
+            this.lblNumero.Name = "lblNumero";
+            this.lblNumero.Size = new System.Drawing.Size(62, 18);
+            this.lblNumero.TabIndex = 15;
+            this.lblNumero.Text = "Número";
             // 
-            // lblCidade
+            // mskCEP
             // 
-            this.lblCidade.AutoSize = true;
-            this.lblCidade.Location = new System.Drawing.Point(388, 181);
-            this.lblCidade.Name = "lblCidade";
-            this.lblCidade.Size = new System.Drawing.Size(54, 18);
-            this.lblCidade.TabIndex = 21;
-            this.lblCidade.Text = "Cidade";
+            this.mskCEP.Location = new System.Drawing.Point(598, 132);
+            this.mskCEP.Mask = "999999-999";
+            this.mskCEP.Name = "mskCEP";
+            this.mskCEP.Size = new System.Drawing.Size(100, 24);
+            this.mskCEP.TabIndex = 6;
             // 
-            // txtCidade
+            // lblCEP
             // 
-            this.txtCidade.Location = new System.Drawing.Point(448, 175);
-            this.txtCidade.MaxLength = 100;
-            this.txtCidade.Name = "txtCidade";
-            this.txtCidade.Size = new System.Drawing.Size(94, 24);
-            this.txtCidade.TabIndex = 9;
+            this.lblCEP.AutoSize = true;
+            this.lblCEP.Location = new System.Drawing.Point(552, 135);
+            this.lblCEP.Name = "lblCEP";
+            this.lblCEP.Size = new System.Drawing.Size(39, 18);
+            this.lblCEP.TabIndex = 13;
+            this.lblCEP.Text = "CEP";
+            // 
+            // txtEndereco
+            // 
+            this.txtEndereco.Location = new System.Drawing.Point(380, 129);
+            this.txtEndereco.MaxLength = 100;
+            this.txtEndereco.Name = "txtEndereco";
+            this.txtEndereco.Size = new System.Drawing.Size(147, 24);
+            this.txtEndereco.TabIndex = 5;
+            // 
+            // lblEndereco
+            // 
+            this.lblEndereco.AutoSize = true;
+            this.lblEndereco.Location = new System.Drawing.Point(288, 129);
+            this.lblEndereco.Name = "lblEndereco";
+            this.lblEndereco.Size = new System.Drawing.Size(72, 18);
+            this.lblEndereco.TabIndex = 11;
+            this.lblEndereco.Text = "Endereço";
+            // 
+            // txtEmail
+            // 
+            this.txtEmail.Location = new System.Drawing.Point(380, 86);
+            this.txtEmail.MaxLength = 100;
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(147, 24);
+            this.txtEmail.TabIndex = 2;
+            // 
+            // lblEmail
+            // 
+            this.lblEmail.AutoSize = true;
+            this.lblEmail.Location = new System.Drawing.Point(321, 89);
+            this.lblEmail.Name = "lblEmail";
+            this.lblEmail.Size = new System.Drawing.Size(50, 18);
+            this.lblEmail.TabIndex = 9;
+            this.lblEmail.Text = "E-mail";
+            // 
+            // dtpDataDNascimento
+            // 
+            this.dtpDataDNascimento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpDataDNascimento.Location = new System.Drawing.Point(155, 129);
+            this.dtpDataDNascimento.Name = "dtpDataDNascimento";
+            this.dtpDataDNascimento.Size = new System.Drawing.Size(112, 24);
+            this.dtpDataDNascimento.TabIndex = 4;
+            // 
+            // lblDataDNascimento
+            // 
+            this.lblDataDNascimento.AutoSize = true;
+            this.lblDataDNascimento.Location = new System.Drawing.Point(6, 129);
+            this.lblDataDNascimento.Name = "lblDataDNascimento";
+            this.lblDataDNascimento.Size = new System.Drawing.Size(143, 18);
+            this.lblDataDNascimento.TabIndex = 7;
+            this.lblDataDNascimento.Text = "Data de Nascimento";
+            // 
+            // mskCPF
+            // 
+            this.mskCPF.Location = new System.Drawing.Point(598, 83);
+            this.mskCPF.Mask = "999,999,999-99";
+            this.mskCPF.Name = "mskCPF";
+            this.mskCPF.Size = new System.Drawing.Size(113, 24);
+            this.mskCPF.TabIndex = 3;
+            // 
+            // lblCPF
+            // 
+            this.lblCPF.AutoSize = true;
+            this.lblCPF.Location = new System.Drawing.Point(553, 89);
+            this.lblCPF.Name = "lblCPF";
+            this.lblCPF.Size = new System.Drawing.Size(38, 18);
+            this.lblCPF.TabIndex = 5;
+            this.lblCPF.Text = "CPF";
+            // 
+            // txtNome
+            // 
+            this.txtNome.Location = new System.Drawing.Point(68, 86);
+            this.txtNome.MaxLength = 100;
+            this.txtNome.Name = "txtNome";
+            this.txtNome.Size = new System.Drawing.Size(224, 24);
+            this.txtNome.TabIndex = 1;
+            // 
+            // lblNome
+            // 
+            this.lblNome.AutoSize = true;
+            this.lblNome.Location = new System.Drawing.Point(6, 86);
+            this.lblNome.Name = "lblNome";
+            this.lblNome.Size = new System.Drawing.Size(49, 18);
+            this.lblNome.TabIndex = 3;
+            this.lblNome.Text = "Nome";
+            // 
+            // txtCodigo
+            // 
+            this.txtCodigo.Location = new System.Drawing.Point(68, 35);
+            this.txtCodigo.MaxLength = 5;
+            this.txtCodigo.Name = "txtCodigo";
+            this.txtCodigo.Size = new System.Drawing.Size(100, 24);
+            this.txtCodigo.TabIndex = 0;
+            // 
+            // lblCodigo
+            // 
+            this.lblCodigo.AutoSize = true;
+            this.lblCodigo.Location = new System.Drawing.Point(6, 35);
+            this.lblCodigo.Name = "lblCodigo";
+            this.lblCodigo.Size = new System.Drawing.Size(56, 18);
+            this.lblCodigo.TabIndex = 1;
+            this.lblCodigo.Text = "Código";
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Silver;
             this.panel1.Controls.Add(this.btnVoltar);
-            this.panel1.Controls.Add(this.btnLimapr);
+            this.panel1.Controls.Add(this.btnLimpar);
             this.panel1.Controls.Add(this.btnPesquisar);
             this.panel1.Controls.Add(this.btnExcluir);
             this.panel1.Controls.Add(this.btnAlterar);
@@ -313,35 +313,44 @@ namespace MercadoSA
             this.panel1.Size = new System.Drawing.Size(784, 104);
             this.panel1.TabIndex = 1;
             // 
-            // button1
+            // btnVoltar
             // 
-            this.button1.Location = new System.Drawing.Point(10, 22);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(100, 55);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "&Novo";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnVoltar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVoltar.Image = ((System.Drawing.Image)(resources.GetObject("btnVoltar.Image")));
+            this.btnVoltar.Location = new System.Drawing.Point(681, 22);
+            this.btnVoltar.Name = "btnVoltar";
+            this.btnVoltar.Size = new System.Drawing.Size(100, 59);
+            this.btnVoltar.TabIndex = 6;
+            this.btnVoltar.Text = "&Voltar";
+            this.btnVoltar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnVoltar.UseVisualStyleBackColor = true;
+            this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
             // 
-            // button2
+            // btnLimpar
             // 
-            this.button2.Location = new System.Drawing.Point(116, 22);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(100, 59);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "&Cadastrar";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnLimpar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLimpar.Image = ((System.Drawing.Image)(resources.GetObject("btnLimpar.Image")));
+            this.btnLimpar.Location = new System.Drawing.Point(566, 22);
+            this.btnLimpar.Name = "btnLimpar";
+            this.btnLimpar.Size = new System.Drawing.Size(100, 59);
+            this.btnLimpar.TabIndex = 5;
+            this.btnLimpar.Text = "&Limpar";
+            this.btnLimpar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnLimpar.UseVisualStyleBackColor = true;
+            this.btnLimpar.Click += new System.EventHandler(this.btnLimapr_Click);
             // 
-            // btnAlterar
+            // btnPesquisar
             // 
-            this.btnAlterar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAlterar.Image = ((System.Drawing.Image)(resources.GetObject("btnAlterar.Image")));
-            this.btnAlterar.Location = new System.Drawing.Point(231, 22);
-            this.btnAlterar.Name = "btnAlterar";
-            this.btnAlterar.Size = new System.Drawing.Size(100, 59);
-            this.btnAlterar.TabIndex = 2;
-            this.btnAlterar.Text = "&Alterar";
-            this.btnAlterar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnAlterar.UseVisualStyleBackColor = true;
+            this.btnPesquisar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPesquisar.Image = ((System.Drawing.Image)(resources.GetObject("btnPesquisar.Image")));
+            this.btnPesquisar.Location = new System.Drawing.Point(452, 22);
+            this.btnPesquisar.Name = "btnPesquisar";
+            this.btnPesquisar.Size = new System.Drawing.Size(100, 59);
+            this.btnPesquisar.TabIndex = 4;
+            this.btnPesquisar.Text = "&Pesquisar";
+            this.btnPesquisar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnPesquisar.UseVisualStyleBackColor = true;
+            this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);
             // 
             // btnExcluir
             // 
@@ -355,54 +364,17 @@ namespace MercadoSA
             this.btnExcluir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnExcluir.UseVisualStyleBackColor = true;
             // 
-            // btnPesquisar
+            // btnAlterar
             // 
-            this.btnPesquisar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPesquisar.Image = ((System.Drawing.Image)(resources.GetObject("btnPesquisar.Image")));
-            this.btnPesquisar.Location = new System.Drawing.Point(452, 22);
-            this.btnPesquisar.Name = "btnPesquisar";
-            this.btnPesquisar.Size = new System.Drawing.Size(100, 59);
-            this.btnPesquisar.TabIndex = 4;
-            this.btnPesquisar.Text = "&Pesquisar";
-            this.btnPesquisar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnPesquisar.UseVisualStyleBackColor = true;
-            // 
-            // btnLimapr
-            // 
-            this.btnLimapr.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLimapr.Image = ((System.Drawing.Image)(resources.GetObject("btnLimapr.Image")));
-            this.btnLimapr.Location = new System.Drawing.Point(566, 22);
-            this.btnLimapr.Name = "btnLimapr";
-            this.btnLimapr.Size = new System.Drawing.Size(100, 59);
-            this.btnLimapr.TabIndex = 5;
-            this.btnLimapr.Text = "&Limpar";
-            this.btnLimapr.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnLimapr.UseVisualStyleBackColor = true;
-            // 
-            // btnVoltar
-            // 
-            this.btnVoltar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVoltar.Image = ((System.Drawing.Image)(resources.GetObject("btnVoltar.Image")));
-            this.btnVoltar.Location = new System.Drawing.Point(681, 22);
-            this.btnVoltar.Name = "btnVoltar";
-            this.btnVoltar.Size = new System.Drawing.Size(100, 59);
-            this.btnVoltar.TabIndex = 6;
-            this.btnVoltar.Text = "&Voltar";
-            this.btnVoltar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnVoltar.UseVisualStyleBackColor = true;
-            // 
-            // btnNovo
-            // 
-            this.btnNovo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNovo.Image = ((System.Drawing.Image)(resources.GetObject("btnNovo.Image")));
-            this.btnNovo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNovo.Location = new System.Drawing.Point(10, 22);
-            this.btnNovo.Name = "btnNovo";
-            this.btnNovo.Size = new System.Drawing.Size(100, 59);
-            this.btnNovo.TabIndex = 0;
-            this.btnNovo.Text = "&Novo";
-            this.btnNovo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnNovo.UseVisualStyleBackColor = true;
+            this.btnAlterar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAlterar.Image = ((System.Drawing.Image)(resources.GetObject("btnAlterar.Image")));
+            this.btnAlterar.Location = new System.Drawing.Point(231, 22);
+            this.btnAlterar.Name = "btnAlterar";
+            this.btnAlterar.Size = new System.Drawing.Size(100, 59);
+            this.btnAlterar.TabIndex = 2;
+            this.btnAlterar.Text = "&Alterar";
+            this.btnAlterar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnAlterar.UseVisualStyleBackColor = true;
             // 
             // btnCadastrar
             // 
@@ -416,6 +388,39 @@ namespace MercadoSA
             this.btnCadastrar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCadastrar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnCadastrar.UseVisualStyleBackColor = true;
+            this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(116, 22);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(100, 59);
+            this.button2.TabIndex = 1;
+            this.button2.Text = "&Cadastrar";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // btnNovo
+            // 
+            this.btnNovo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNovo.Image = ((System.Drawing.Image)(resources.GetObject("btnNovo.Image")));
+            this.btnNovo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnNovo.Location = new System.Drawing.Point(10, 22);
+            this.btnNovo.Name = "btnNovo";
+            this.btnNovo.Size = new System.Drawing.Size(100, 59);
+            this.btnNovo.TabIndex = 0;
+            this.btnNovo.Text = "&Novo";
+            this.btnNovo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnNovo.UseVisualStyleBackColor = true;
+            this.btnNovo.Click += new System.EventHandler(this.btnNovo_Click);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(10, 22);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(100, 55);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "&Novo";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // frmFuncinarios
             // 
@@ -431,6 +436,7 @@ namespace MercadoSA
             this.Name = "frmFuncinarios";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Loja-Funcionários";
+            this.Load += new System.EventHandler(this.frmFuncinarios_Load);
             this.gpbFuncionario.ResumeLayout(false);
             this.gpbFuncionario.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -456,8 +462,8 @@ namespace MercadoSA
         private System.Windows.Forms.Label lblNumero;
         private System.Windows.Forms.MaskedTextBox mskCEP;
         private System.Windows.Forms.Label lblCEP;
-        private System.Windows.Forms.TextBox txtEndereço;
-        private System.Windows.Forms.Label lblEndereço;
+        private System.Windows.Forms.TextBox txtEndereco;
+        private System.Windows.Forms.Label lblEndereco;
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Label lblEmail;
         private System.Windows.Forms.DateTimePicker dtpDataDNascimento;
@@ -466,7 +472,7 @@ namespace MercadoSA
         private System.Windows.Forms.Label lblCPF;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnVoltar;
-        private System.Windows.Forms.Button btnLimapr;
+        private System.Windows.Forms.Button btnLimpar;
         private System.Windows.Forms.Button btnPesquisar;
         private System.Windows.Forms.Button btnExcluir;
         private System.Windows.Forms.Button btnAlterar;

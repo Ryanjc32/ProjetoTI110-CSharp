@@ -50,6 +50,7 @@ namespace MercadoSA
             this.btnFuncionarios.Text = "&Funcionários\r\n";
             this.btnFuncionarios.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnFuncionarios.UseVisualStyleBackColor = true;
+            this.btnFuncionarios.Click += new System.EventHandler(this.btnFuncionarios_Click);
             // 
             // btmVendas
             // 
@@ -62,7 +63,6 @@ namespace MercadoSA
             this.btmVendas.Text = "&Vendas";
             this.btmVendas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btmVendas.UseVisualStyleBackColor = true;
-         
             // 
             // btmClientes
             // 
@@ -87,7 +87,6 @@ namespace MercadoSA
             this.btmUsuarios.Text = "&Usuários";
             this.btmUsuarios.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btmUsuarios.UseVisualStyleBackColor = true;
-            
             // 
             // btmFornecedores
             // 
@@ -144,6 +143,7 @@ namespace MercadoSA
             this.Name = "frmMenuPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LojaABC-MenuPrincipal";
+            this.Load += new System.EventHandler(this.frmMenuPrincipal_Load);
             this.ResumeLayout(false);
 
         }
