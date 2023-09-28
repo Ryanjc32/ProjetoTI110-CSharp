@@ -64,6 +64,7 @@ namespace MercadoSA
             this.button2 = new System.Windows.Forms.Button();
             this.btnNovo = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.btnCarregaCEP = new System.Windows.Forms.Button();
             this.gpbFuncionario.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -71,6 +72,7 @@ namespace MercadoSA
             // gpbFuncionario
             // 
             this.gpbFuncionario.BackColor = System.Drawing.Color.Silver;
+            this.gpbFuncionario.Controls.Add(this.btnCarregaCEP);
             this.gpbFuncionario.Controls.Add(this.txtCidade);
             this.gpbFuncionario.Controls.Add(this.lblCidade);
             this.gpbFuncionario.Controls.Add(this.cbbEstado);
@@ -176,7 +178,7 @@ namespace MercadoSA
             // mskCEP
             // 
             this.mskCEP.Location = new System.Drawing.Point(598, 132);
-            this.mskCEP.Mask = "999999-999";
+            this.mskCEP.Mask = "99999-999";
             this.mskCEP.Name = "mskCEP";
             this.mskCEP.Size = new System.Drawing.Size(100, 24);
             this.mskCEP.TabIndex = 6;
@@ -363,6 +365,7 @@ namespace MercadoSA
             this.btnExcluir.Text = "&Excluir";
             this.btnExcluir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnExcluir.UseVisualStyleBackColor = true;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // btnAlterar
             // 
@@ -375,6 +378,7 @@ namespace MercadoSA
             this.btnAlterar.Text = "&Alterar";
             this.btnAlterar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnAlterar.UseVisualStyleBackColor = true;
+            this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
             // 
             // btnCadastrar
             // 
@@ -421,6 +425,16 @@ namespace MercadoSA
             this.button1.TabIndex = 0;
             this.button1.Text = "&Novo";
             this.button1.UseVisualStyleBackColor = true;
+            // 
+            // btnCarregaCEP
+            // 
+            this.btnCarregaCEP.Location = new System.Drawing.Point(452, 215);
+            this.btnCarregaCEP.Name = "btnCarregaCEP";
+            this.btnCarregaCEP.Size = new System.Drawing.Size(234, 23);
+            this.btnCarregaCEP.TabIndex = 2;
+            this.btnCarregaCEP.Text = "CarregaCEP";
+            this.btnCarregaCEP.UseVisualStyleBackColor = true;
+            this.btnCarregaCEP.Click += new System.EventHandler(this.btnCarregaCEP_Click);
             // 
             // frmFuncinarios
             // 
@@ -480,5 +494,6 @@ namespace MercadoSA
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnCadastrar;
         private System.Windows.Forms.Button btnNovo;
+        private System.Windows.Forms.Button btnCarregaCEP;
     }
 }

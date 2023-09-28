@@ -21,11 +21,14 @@ namespace MercadoSA
         static extern IntPtr GetSystemMenu(IntPtr hWnd, bool bRevert);
         [DllImport("user32")]
         static extern int GetMenuItemCount(IntPtr hWnd);
+
+
         public frmPesquisarFuncionarios()
         {
             InitializeComponent();
             desabilitarCampos();
         }
+
 
         private void frmPesquisarFuncionarios_Load(object sender, EventArgs e)
         {
@@ -50,7 +53,7 @@ namespace MercadoSA
             btnLimpar.Enabled = true;
             txtDescricao.Enabled = true;
             txtDescricao.Focus();
-           
+
 
         }
         //limpar campos
@@ -59,7 +62,7 @@ namespace MercadoSA
             txtDescricao.Clear();
             rdbCodigo.Checked = false;
             rdbNome.Checked = false;
-            txtDescricao.Focus();
+            txtDescricao.Enabled = false;
             //limpa a lista
             ltbPesquisar.Items.Clear();
         }
@@ -78,5 +81,28 @@ namespace MercadoSA
             ltbPesquisar.Items.Clear();
             ltbPesquisar.Items.Add(txtDescricao.Text);
         }
+
+        private void btnLimpar_Click(object sender, EventArgs e)
+        {
+            limparCampos();
+        }
+
+        private void ltbPesquisar_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (ltbPesquisar.SelectedItem == null)
+            {
+                MessageBox.Show("Favor selecionar um item.","Mensagem do Sistema", MessageBoxButtons.OK,MessageBoxIcon.Error);
+            }
+            else
+            {
+                string nome = ltbPesquisar.SelectedItem.ToString();
+                frmFuncinarios abrir = new frmFuncinarios(nome);
+                abrir.Show();
+                this.Hide();
+            }
+
+        }
+
     }
 }
+

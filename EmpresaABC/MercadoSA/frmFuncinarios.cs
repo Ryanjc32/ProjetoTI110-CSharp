@@ -26,6 +26,13 @@ namespace MercadoSA
         {
             InitializeComponent();
             desabilitarCampos();
+        } public frmFuncinarios(string nome)
+        {
+            InitializeComponent();
+            desabilitarCampos();
+            txtNome.Text = nome;
+            //habilitar os campos
+            HabilitarCamposAlterar();
         }
 
         private void btnVoltar_Click(object sender, EventArgs e)
@@ -130,6 +137,27 @@ namespace MercadoSA
             btnLimpar.Enabled = true;
             btnNovo.Enabled = false;
 
+        } public void HabilitarCamposAlterar()
+        {
+            txtCodigo.Enabled = false;
+            txtNome.Enabled = true;
+            txtEndereco.Enabled = true;
+            txtBairro.Enabled = true;
+            txtEmail.Enabled = true;
+            txtNumero.Enabled = true;
+            txtCidade.Enabled = true;
+            mskCEP.Enabled = true;
+            mskCPF.Enabled = true;
+            cbbEstado.Enabled = true;
+            cbbEstado.Enabled = true;
+            txtNome.Enabled = true;
+
+            btnCadastrar.Enabled = false;
+            btnAlterar.Enabled = true;
+            btnExcluir.Enabled = true;
+            btnLimpar.Enabled = true;
+            btnNovo.Enabled = false;
+
         }
 
         private void btnNovo_Click(object sender, EventArgs e)
@@ -162,7 +190,39 @@ namespace MercadoSA
         private void btnPesquisar_Click(object sender, EventArgs e)
         {
             frmPesquisarFuncionarios abrir = new frmPesquisarFuncionarios();
-            abrir.ShowDialog();
+            abrir.Show();
+            this.Hide();
+        }
+
+        private void btnAlterar_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Alterado com sucesso!!!", "Mensagem do Sistema", MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1);
+            limparCampos();
+        }
+
+        private void btnExcluir_Click(object sender, EventArgs e)
+        {
+            DialogResult resp = MessageBox.Show("Deseja excluir?", "Mensagem do Sistema", MessageBoxButtons.OKCancel, MessageBoxIcon.Information, MessageBoxDefaultButton.Button2);
+            if (resp == DialogResult.OK)
+            {
+                limparCampos();
+            }
+            else
+            {
+
+            }
+        }
+
+        private void btnCarregaCEP_Click(object sender, EventArgs e)
+        {
+            WSCorreios.AtendeClienteClient ws = new WSCorreios.AtendeClienteClient();
+
+            WSCorreios.enderecoERP endereco = ws.consultaCEP(mskCEP.Text);
+
+            txtEndereco.Text = endereco.end;
+            txtBairro.Text = endereco.bairro;
+            txtCidade.Text = endereco.cidade;
+            cbbEstado.Text = endereco.uf;
         }
     }
 

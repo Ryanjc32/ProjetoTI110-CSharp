@@ -16,7 +16,7 @@ namespace MercadoSA
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmPesquisarFuncionarios());
+            Application.Run(new frmFuncinarios());
         }
     }
 }
