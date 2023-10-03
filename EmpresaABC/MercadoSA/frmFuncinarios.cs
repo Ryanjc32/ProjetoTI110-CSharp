@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using MySql.Data.MySqlClient;
 
 namespace MercadoSA
 {
@@ -26,7 +27,8 @@ namespace MercadoSA
         {
             InitializeComponent();
             desabilitarCampos();
-        } public frmFuncinarios(string nome)
+        }
+        public frmFuncinarios(string nome)
         {
             InitializeComponent();
             desabilitarCampos();
@@ -137,7 +139,8 @@ namespace MercadoSA
             btnLimpar.Enabled = true;
             btnNovo.Enabled = false;
 
-        } public void HabilitarCamposAlterar()
+        }
+        public void HabilitarCamposAlterar()
         {
             txtCodigo.Enabled = false;
             txtNome.Enabled = true;
@@ -163,6 +166,31 @@ namespace MercadoSA
         private void btnNovo_Click(object sender, EventArgs e)
         {
             HabilitarCampos();
+        }
+        //Cadastrar fncionários no banco de dados
+        public void cadastrarFuncionario()
+        {
+            MySqlCommand comm = new MySqlCommand();
+            comm.CommandText = "insert into tbFuncionarios(nome,email,cpf,dNasc,endereco,cep,numero,bairro,estado,cidade)values(@nome,@email,@cpf,@dNasc,@endereco,@cep,@numero,@bairro,@estado,@cidade);";
+            comm.CommandType = CommandType.Text;
+
+            comm.Parameters.Clear();
+
+            comm.Parameters.Add("@Nome", MySqlDbType.VarChar,100).Value = txtNome.Text;
+            comm.Parameters.Add("@email", MySqlDbType.VarChar, 100).Value = txtEmail.Text;
+            comm.Parameters.Add("@cpf", MySqlDbType.VarChar, 14).Value = mskCPF.Text;
+            comm.Parameters.Add("@dNasc", MySqlDbType.Date).Value = dtpDataDNascimento.Text;
+            comm.Parameters.Add("@endereco", MySqlDbType.VarChar, 100).Value = txtEndereco.Text;
+            comm.Parameters.Add("@cep", MySqlDbType.VarChar, 9).Value = mskCPF.Text;
+            comm.Parameters.Add("@numero", MySqlDbType.VarChar, 10).Value = txtNumero.Text;
+            comm.Parameters.Add("@bairro", MySqlDbType.VarChar, 100).Value = txtBairro.Text;
+            comm.Parameters.Add("@estado", MySqlDbType.VarChar, 2).Value = cbbEstado.Text;
+            comm.Parameters.Add("@cidade", MySqlDbType.VarChar, 100).Value = txtCidade.Text;
+
+            comm.Connection = conexao.obterConexao();
+
+            conexao.fecharConexao();
+
         }
 
         private void btnCadastrar_Click(object sender, EventArgs e)
@@ -224,7 +252,36 @@ namespace MercadoSA
             txtCidade.Text = endereco.cidade;
             cbbEstado.Text = endereco.uf;
         }
-    }
 
+        private void mskCEP_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                WSCorreios.AtendeClienteClient ws = new WSCorreios.AtendeClienteClient();
+
+                try
+                {
+                    WSCorreios.enderecoERP endereco = ws.consultaCEP(mskCEP.Text);
+
+                    txtEndereco.Text = endereco.end;
+                    txtBairro.Text = endereco.bairro;
+                    txtCidade.Text = endereco.cidade;
+                    cbbEstado.Text = endereco.uf;
+
+                    txtNumero.Focus();
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Valor inserir CEP válido", "Mensagem do Sistema", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
+                    mskCEP.Focus();
+                    mskCEP.Clear();
+                }
+            }
+        }
+
+
+    }
 }
+
+
 
