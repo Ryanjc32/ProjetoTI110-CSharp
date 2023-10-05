@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using MySql.Data.MySqlClient;
 
 namespace MercadoSA
 {
@@ -36,6 +37,8 @@ namespace MercadoSA
             int MenuCount = GetMenuItemCount(hMenu) - 1;
             RemoveMenu(hMenu, MenuCount, MF_BYCOMMAND);
         }
+    
+
         //desabilitar campos
         public void desabilitarCampos()
         {
@@ -63,6 +66,7 @@ namespace MercadoSA
             rdbCodigo.Checked = false;
             rdbNome.Checked = false;
             txtDescricao.Enabled = false;
+
             //limpa a lista
             ltbPesquisar.Items.Clear();
         }
@@ -78,9 +82,67 @@ namespace MercadoSA
 
         private void btnPesquisar_Click(object sender, EventArgs e)
         {
-            ltbPesquisar.Items.Clear();
-            ltbPesquisar.Items.Add(txtDescricao.Text);
+            if (rdbCodigo.Checked)
+            {
+                pesquisaCodigo(Convert.ToInt32(txtDescricao.Text));
+            }
+            if (rdbNome.Checked)
+            {
+                pesquisarNome(txtDescricao.Text);
+            }
         }
+        //Pesquisar por código
+        public void pesquisaCodigo(int codigo)
+        {
+            MySqlCommand comm = new MySqlCommand();
+            comm.CommandText = "select * from tbFuncionarios where codFunc = @codFunc;";
+            comm.CommandType = CommandType.Text;
+
+            comm.Parameters.Clear();
+            comm.Parameters.Add("codFunc",MySqlDbType.Int32).Value = codigo;
+
+            comm.Connection = conexao.obterConexao();
+
+            //Carregando dados para objeto de tabela 
+            MySqlDataReader DR;
+
+            DR = comm.ExecuteReader();
+            DR.Read();
+            ltbPesquisar.Items.Clear();
+
+            ltbPesquisar.Items.Add(DR.GetString(1));
+
+            conexao.fecharConexao();
+        }
+
+        //Pesquisar por nome
+        public void pesquisarNome(string nome)
+        {
+            MySqlCommand comm = new MySqlCommand();
+            comm.CommandText = "select * from tbFuncionarios where nome like '%"+nome+"%';";
+            comm.CommandType = CommandType.Text;
+
+            comm.Parameters.Clear();
+            comm.Parameters.Add("nome", MySqlDbType.VarChar, 100).Value = nome;
+
+            comm.Connection = conexao.obterConexao();
+
+            //Carregando dados para objeto de tabela 
+
+            MySqlDataReader DR;
+
+            DR = comm.ExecuteReader();
+            ltbPesquisar.Items.Clear();
+            while (DR.Read())
+            {
+                ltbPesquisar.Items.Add(DR.GetString(1));
+            }
+
+            conexao.fecharConexao();
+        }
+
+
+
 
         private void btnLimpar_Click(object sender, EventArgs e)
         {
@@ -100,7 +162,6 @@ namespace MercadoSA
                 abrir.Show();
                 this.Hide();
             }
-
         }
 
     }

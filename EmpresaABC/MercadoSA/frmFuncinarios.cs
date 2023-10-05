@@ -166,9 +166,10 @@ namespace MercadoSA
         private void btnNovo_Click(object sender, EventArgs e)
         {
             HabilitarCampos();
+            carregaCodigo();
         }
         //Cadastrar fncionários no banco de dados
-        public void cadastrarFuncionario()
+        public int cadastrarFuncionario()
         {
             MySqlCommand comm = new MySqlCommand();
             comm.CommandText = "insert into tbFuncionarios(nome,email,cpf,dNasc,endereco,cep,numero,bairro,estado,cidade)values(@nome,@email,@cpf,@dNasc,@endereco,@cep,@numero,@bairro,@estado,@cidade);";
@@ -179,7 +180,7 @@ namespace MercadoSA
             comm.Parameters.Add("@Nome", MySqlDbType.VarChar,100).Value = txtNome.Text;
             comm.Parameters.Add("@email", MySqlDbType.VarChar, 100).Value = txtEmail.Text;
             comm.Parameters.Add("@cpf", MySqlDbType.VarChar, 14).Value = mskCPF.Text;
-            comm.Parameters.Add("@dNasc", MySqlDbType.Date).Value = dtpDataDNascimento.Text;
+            comm.Parameters.Add("@dNasc", MySqlDbType.Date).Value = Convert.ToDateTime (dtpDataDNascimento.Text);
             comm.Parameters.Add("@endereco", MySqlDbType.VarChar, 100).Value = txtEndereco.Text;
             comm.Parameters.Add("@cep", MySqlDbType.VarChar, 9).Value = mskCPF.Text;
             comm.Parameters.Add("@numero", MySqlDbType.VarChar, 10).Value = txtNumero.Text;
@@ -189,20 +190,88 @@ namespace MercadoSA
 
             comm.Connection = conexao.obterConexao();
 
+            int res = comm.ExecuteNonQuery();
+
             conexao.fecharConexao();
+
+            return res;
+        }
+
+        // carrega código
+
+        public void carregaCodigo()
+        {
+            MySqlCommand comm = new MySqlCommand();
+            comm.CommandText = "select codFunc+1 from tbFuncionarios order by codFunc desc;";
+            comm.CommandType = CommandType.Text;
+
+            comm.Connection = conexao.obterConexao();
+            MySqlDataReader DR;
+            DR = comm.ExecuteReader();
+            DR.Read();
+
+            txtCodigo.Text = Convert.ToString(DR.GetString(0));
+
+            conexao.fecharConexao();
+        }
+
+
+        //carregar funcionário
+        public void carregaFuncionario(string nome)
+        {
+            MySqlCommand comm = new MySqlCommand();
+            comm.CommandText = "select * from tbFuncionarios where nome = @nome ;";
+            comm.CommandType = CommandType.Text;
+
+            comm.Parameters.Clear();
+            comm.Parameters.Add("@nome", MySqlDbType.VarChar, 100).Value = nome;
+
+            comm.Connection = conexao.obterConexao();
+
+            MySqlDataReader DR;
+            DR = comm.ExecuteReader();
+            DR.Read();
+
+            txtCodigo.Text = Convert.ToString(DR.GetString(0));
+            txtNome.Text = Convert.ToString(DR.GetString(1));
+            txtEmail.Text = Convert.ToString(DR.GetString(2));
+            mskCPF.Text = Convert.ToString(DR.GetString(3));
+            dtpDataDNascimento.Text = Convert.ToString(DR.GetString(4));
+            txtEndereco.Text = Convert.ToString(DR.GetString(5));
+            mskCEP.Text = Convert.ToString(DR.GetString(6));
+            txtNumero.Text = Convert.ToString(DR.GetString(7));
+            txtBairro.Text = Convert.ToString(DR.GetString(8));
+            cbbEstado.Text = Convert.ToString(DR.GetString(9));
+            txtCidade.Text = Convert.ToString(DR.GetString(10));
+
+            conexao.fecharConexao();
+
+
 
         }
 
+
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
-            if (txtNome.Text.Equals("") || txtEmail.Text.Equals("") || txtEndereco.Text.Equals("") || txtNumero.Text.Equals("") || txtBairro.Text.Equals("") || txtCidade.Text.Equals("") || mskCPF.Text.Equals("   .   .   -") || mskCEP.Text.Equals("      -") || cbbEstado.Text.Equals(""))
+            if (txtNome.Text.Equals("") || txtEmail.Text.Equals("") || txtEndereco.Text.Equals("") || txtNumero.Text.Equals("") || 
+                txtBairro.Text.Equals("") || txtCidade.Text.Equals("") || mskCPF.Text.Equals("   .   .   -") || mskCEP.Text.Equals("      -") ||
+                cbbEstado.Text.Equals(""))
             {
                 MessageBox.Show("Favor preencher os campos!!");
             }
             else
             {
-                MessageBox.Show("Cadastrado com sucesso.    ");
-                desabilitarCamposNovo();
+                if (cadastrarFuncionario()== 1)
+                {
+                    MessageBox.Show("Cadastrado com sucesso!!");
+                    desabilitarCamposNovo();
+                    limparCampos();
+                }
+                else
+                {
+                    MessageBox.Show("Erro ao Cadastrar");
+                }
+                
             }
 
             desabilitarCamposNovo();
@@ -278,7 +347,6 @@ namespace MercadoSA
                 }
             }
         }
-
 
     }
 }
