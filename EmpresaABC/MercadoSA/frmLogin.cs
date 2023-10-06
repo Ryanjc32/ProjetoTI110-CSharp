@@ -36,10 +36,7 @@ namespace MercadoSA
 
         private void btmEntrar_Click(object sender, EventArgs e)
         {
-            //frmMenuPrincipal abrir = new frmMenuPrincipal();
-            //abrir.Show();
-            //this.Hide();
-
+            
             //declaração das variáveis
             string usuario, senha;
 
@@ -61,6 +58,7 @@ namespace MercadoSA
                 txtUsuario.Focus();
             }
         }
+
 
         private void txtUsuario_KeyDown(object sender, KeyEventArgs e)
         {

@@ -31,24 +31,9 @@ namespace MercadoSA
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmFuncinarios));
             this.gpbFuncionario = new System.Windows.Forms.GroupBox();
-            this.txtCidade = new System.Windows.Forms.TextBox();
-            this.lblCidade = new System.Windows.Forms.Label();
-            this.cbbEstado = new System.Windows.Forms.ComboBox();
-            this.lblEstado = new System.Windows.Forms.Label();
-            this.txtBairro = new System.Windows.Forms.TextBox();
             this.lblBairro = new System.Windows.Forms.Label();
             this.txtNumero = new System.Windows.Forms.TextBox();
             this.lblNumero = new System.Windows.Forms.Label();
-            this.mskCEP = new System.Windows.Forms.MaskedTextBox();
-            this.lblCEP = new System.Windows.Forms.Label();
-            this.txtEndereco = new System.Windows.Forms.TextBox();
-            this.lblEndereco = new System.Windows.Forms.Label();
-            this.txtEmail = new System.Windows.Forms.TextBox();
-            this.lblEmail = new System.Windows.Forms.Label();
-            this.dtpDataDNascimento = new System.Windows.Forms.DateTimePicker();
-            this.lblDataDNascimento = new System.Windows.Forms.Label();
-            this.mskCPF = new System.Windows.Forms.MaskedTextBox();
-            this.lblCPF = new System.Windows.Forms.Label();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.lblNome = new System.Windows.Forms.Label();
             this.txtCodigo = new System.Windows.Forms.TextBox();
@@ -64,6 +49,21 @@ namespace MercadoSA
             this.button2 = new System.Windows.Forms.Button();
             this.btnNovo = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.lblDataDNascimento = new System.Windows.Forms.Label();
+            this.dtpDataDNascimento = new System.Windows.Forms.DateTimePicker();
+            this.lblCPF = new System.Windows.Forms.Label();
+            this.mskCPF = new System.Windows.Forms.MaskedTextBox();
+            this.lblEmail = new System.Windows.Forms.Label();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.lblEndereco = new System.Windows.Forms.Label();
+            this.txtEndereco = new System.Windows.Forms.TextBox();
+            this.lblCEP = new System.Windows.Forms.Label();
+            this.mskCEP = new System.Windows.Forms.MaskedTextBox();
+            this.txtBairro = new System.Windows.Forms.TextBox();
+            this.lblEstado = new System.Windows.Forms.Label();
+            this.cbbEstado = new System.Windows.Forms.ComboBox();
+            this.lblCidade = new System.Windows.Forms.Label();
+            this.txtCidade = new System.Windows.Forms.TextBox();
             this.gpbFuncionario.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -101,52 +101,6 @@ namespace MercadoSA
             this.gpbFuncionario.TabStop = false;
             this.gpbFuncionario.Text = "Dados";
             // 
-            // txtCidade
-            // 
-            this.txtCidade.Location = new System.Drawing.Point(448, 175);
-            this.txtCidade.MaxLength = 100;
-            this.txtCidade.Name = "txtCidade";
-            this.txtCidade.Size = new System.Drawing.Size(94, 24);
-            this.txtCidade.TabIndex = 9;
-            // 
-            // lblCidade
-            // 
-            this.lblCidade.AutoSize = true;
-            this.lblCidade.Location = new System.Drawing.Point(388, 181);
-            this.lblCidade.Name = "lblCidade";
-            this.lblCidade.Size = new System.Drawing.Size(54, 18);
-            this.lblCidade.TabIndex = 21;
-            this.lblCidade.Text = "Cidade";
-            // 
-            // cbbEstado
-            // 
-            this.cbbEstado.FormattingEnabled = true;
-            this.cbbEstado.Items.AddRange(new object[] {
-            "SP",
-            "RJ",
-            "MT"});
-            this.cbbEstado.Location = new System.Drawing.Point(614, 171);
-            this.cbbEstado.Name = "cbbEstado";
-            this.cbbEstado.Size = new System.Drawing.Size(121, 26);
-            this.cbbEstado.TabIndex = 10;
-            // 
-            // lblEstado
-            // 
-            this.lblEstado.AutoSize = true;
-            this.lblEstado.Location = new System.Drawing.Point(553, 178);
-            this.lblEstado.Name = "lblEstado";
-            this.lblEstado.Size = new System.Drawing.Size(55, 18);
-            this.lblEstado.TabIndex = 19;
-            this.lblEstado.Text = "Estado";
-            // 
-            // txtBairro
-            // 
-            this.txtBairro.Location = new System.Drawing.Point(256, 176);
-            this.txtBairro.MaxLength = 100;
-            this.txtBairro.Name = "txtBairro";
-            this.txtBairro.Size = new System.Drawing.Size(115, 24);
-            this.txtBairro.TabIndex = 8;
-            // 
             // lblBairro
             // 
             this.lblBairro.AutoSize = true;
@@ -172,92 +126,6 @@ namespace MercadoSA
             this.lblNumero.Size = new System.Drawing.Size(62, 18);
             this.lblNumero.TabIndex = 15;
             this.lblNumero.Text = "Número";
-            // 
-            // mskCEP
-            // 
-            this.mskCEP.Location = new System.Drawing.Point(598, 132);
-            this.mskCEP.Mask = "99999-999";
-            this.mskCEP.Name = "mskCEP";
-            this.mskCEP.Size = new System.Drawing.Size(100, 24);
-            this.mskCEP.TabIndex = 6;
-            this.mskCEP.KeyDown += new System.Windows.Forms.KeyEventHandler(this.mskCEP_KeyDown);
-            // 
-            // lblCEP
-            // 
-            this.lblCEP.AutoSize = true;
-            this.lblCEP.Location = new System.Drawing.Point(552, 135);
-            this.lblCEP.Name = "lblCEP";
-            this.lblCEP.Size = new System.Drawing.Size(39, 18);
-            this.lblCEP.TabIndex = 13;
-            this.lblCEP.Text = "CEP";
-            // 
-            // txtEndereco
-            // 
-            this.txtEndereco.Location = new System.Drawing.Point(380, 129);
-            this.txtEndereco.MaxLength = 100;
-            this.txtEndereco.Name = "txtEndereco";
-            this.txtEndereco.Size = new System.Drawing.Size(147, 24);
-            this.txtEndereco.TabIndex = 5;
-            // 
-            // lblEndereco
-            // 
-            this.lblEndereco.AutoSize = true;
-            this.lblEndereco.Location = new System.Drawing.Point(288, 129);
-            this.lblEndereco.Name = "lblEndereco";
-            this.lblEndereco.Size = new System.Drawing.Size(72, 18);
-            this.lblEndereco.TabIndex = 11;
-            this.lblEndereco.Text = "Endereço";
-            // 
-            // txtEmail
-            // 
-            this.txtEmail.Location = new System.Drawing.Point(380, 86);
-            this.txtEmail.MaxLength = 100;
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(147, 24);
-            this.txtEmail.TabIndex = 2;
-            // 
-            // lblEmail
-            // 
-            this.lblEmail.AutoSize = true;
-            this.lblEmail.Location = new System.Drawing.Point(321, 89);
-            this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(50, 18);
-            this.lblEmail.TabIndex = 9;
-            this.lblEmail.Text = "E-mail";
-            // 
-            // dtpDataDNascimento
-            // 
-            this.dtpDataDNascimento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpDataDNascimento.Location = new System.Drawing.Point(155, 129);
-            this.dtpDataDNascimento.Name = "dtpDataDNascimento";
-            this.dtpDataDNascimento.Size = new System.Drawing.Size(112, 24);
-            this.dtpDataDNascimento.TabIndex = 4;
-            // 
-            // lblDataDNascimento
-            // 
-            this.lblDataDNascimento.AutoSize = true;
-            this.lblDataDNascimento.Location = new System.Drawing.Point(6, 129);
-            this.lblDataDNascimento.Name = "lblDataDNascimento";
-            this.lblDataDNascimento.Size = new System.Drawing.Size(143, 18);
-            this.lblDataDNascimento.TabIndex = 7;
-            this.lblDataDNascimento.Text = "Data de Nascimento";
-            // 
-            // mskCPF
-            // 
-            this.mskCPF.Location = new System.Drawing.Point(598, 83);
-            this.mskCPF.Mask = "999,999,999-99";
-            this.mskCPF.Name = "mskCPF";
-            this.mskCPF.Size = new System.Drawing.Size(113, 24);
-            this.mskCPF.TabIndex = 3;
-            // 
-            // lblCPF
-            // 
-            this.lblCPF.AutoSize = true;
-            this.lblCPF.Location = new System.Drawing.Point(553, 89);
-            this.lblCPF.Name = "lblCPF";
-            this.lblCPF.Size = new System.Drawing.Size(38, 18);
-            this.lblCPF.TabIndex = 5;
-            this.lblCPF.Text = "CPF";
             // 
             // txtNome
             // 
@@ -425,6 +293,138 @@ namespace MercadoSA
             this.button1.Text = "&Novo";
             this.button1.UseVisualStyleBackColor = true;
             // 
+            // lblDataDNascimento
+            // 
+            this.lblDataDNascimento.AutoSize = true;
+            this.lblDataDNascimento.Location = new System.Drawing.Point(6, 129);
+            this.lblDataDNascimento.Name = "lblDataDNascimento";
+            this.lblDataDNascimento.Size = new System.Drawing.Size(143, 18);
+            this.lblDataDNascimento.TabIndex = 7;
+            this.lblDataDNascimento.Text = "Data de Nascimento";
+            // 
+            // dtpDataDNascimento
+            // 
+            this.dtpDataDNascimento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpDataDNascimento.Location = new System.Drawing.Point(155, 129);
+            this.dtpDataDNascimento.Name = "dtpDataDNascimento";
+            this.dtpDataDNascimento.Size = new System.Drawing.Size(112, 24);
+            this.dtpDataDNascimento.TabIndex = 4;
+            // 
+            // lblCPF
+            // 
+            this.lblCPF.AutoSize = true;
+            this.lblCPF.Location = new System.Drawing.Point(553, 89);
+            this.lblCPF.Name = "lblCPF";
+            this.lblCPF.Size = new System.Drawing.Size(38, 18);
+            this.lblCPF.TabIndex = 5;
+            this.lblCPF.Text = "CPF";
+            // 
+            // mskCPF
+            // 
+            this.mskCPF.Location = new System.Drawing.Point(598, 83);
+            this.mskCPF.Mask = "999,999,999-99";
+            this.mskCPF.Name = "mskCPF";
+            this.mskCPF.Size = new System.Drawing.Size(113, 24);
+            this.mskCPF.TabIndex = 3;
+            // 
+            // lblEmail
+            // 
+            this.lblEmail.AutoSize = true;
+            this.lblEmail.Location = new System.Drawing.Point(321, 89);
+            this.lblEmail.Name = "lblEmail";
+            this.lblEmail.Size = new System.Drawing.Size(50, 18);
+            this.lblEmail.TabIndex = 9;
+            this.lblEmail.Text = "E-mail";
+            // 
+            // txtEmail
+            // 
+            this.txtEmail.Location = new System.Drawing.Point(380, 86);
+            this.txtEmail.MaxLength = 100;
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(147, 24);
+            this.txtEmail.TabIndex = 2;
+            // 
+            // lblEndereco
+            // 
+            this.lblEndereco.AutoSize = true;
+            this.lblEndereco.Location = new System.Drawing.Point(288, 129);
+            this.lblEndereco.Name = "lblEndereco";
+            this.lblEndereco.Size = new System.Drawing.Size(72, 18);
+            this.lblEndereco.TabIndex = 11;
+            this.lblEndereco.Text = "Endereço";
+            // 
+            // txtEndereco
+            // 
+            this.txtEndereco.Location = new System.Drawing.Point(380, 129);
+            this.txtEndereco.MaxLength = 100;
+            this.txtEndereco.Name = "txtEndereco";
+            this.txtEndereco.Size = new System.Drawing.Size(147, 24);
+            this.txtEndereco.TabIndex = 5;
+            // 
+            // lblCEP
+            // 
+            this.lblCEP.AutoSize = true;
+            this.lblCEP.Location = new System.Drawing.Point(552, 135);
+            this.lblCEP.Name = "lblCEP";
+            this.lblCEP.Size = new System.Drawing.Size(39, 18);
+            this.lblCEP.TabIndex = 13;
+            this.lblCEP.Text = "CEP";
+            // 
+            // mskCEP
+            // 
+            this.mskCEP.Location = new System.Drawing.Point(598, 132);
+            this.mskCEP.Mask = "99999-999";
+            this.mskCEP.Name = "mskCEP";
+            this.mskCEP.Size = new System.Drawing.Size(100, 24);
+            this.mskCEP.TabIndex = 6;
+            this.mskCEP.KeyDown += new System.Windows.Forms.KeyEventHandler(this.mskCEP_KeyDown);
+            // 
+            // txtBairro
+            // 
+            this.txtBairro.Location = new System.Drawing.Point(256, 176);
+            this.txtBairro.MaxLength = 100;
+            this.txtBairro.Name = "txtBairro";
+            this.txtBairro.Size = new System.Drawing.Size(115, 24);
+            this.txtBairro.TabIndex = 8;
+            // 
+            // lblEstado
+            // 
+            this.lblEstado.AutoSize = true;
+            this.lblEstado.Location = new System.Drawing.Point(553, 178);
+            this.lblEstado.Name = "lblEstado";
+            this.lblEstado.Size = new System.Drawing.Size(55, 18);
+            this.lblEstado.TabIndex = 19;
+            this.lblEstado.Text = "Estado";
+            // 
+            // cbbEstado
+            // 
+            this.cbbEstado.FormattingEnabled = true;
+            this.cbbEstado.Items.AddRange(new object[] {
+            "SP",
+            "RJ",
+            "MT"});
+            this.cbbEstado.Location = new System.Drawing.Point(614, 171);
+            this.cbbEstado.Name = "cbbEstado";
+            this.cbbEstado.Size = new System.Drawing.Size(121, 26);
+            this.cbbEstado.TabIndex = 10;
+            // 
+            // lblCidade
+            // 
+            this.lblCidade.AutoSize = true;
+            this.lblCidade.Location = new System.Drawing.Point(388, 181);
+            this.lblCidade.Name = "lblCidade";
+            this.lblCidade.Size = new System.Drawing.Size(54, 18);
+            this.lblCidade.TabIndex = 21;
+            this.lblCidade.Text = "Cidade";
+            // 
+            // txtCidade
+            // 
+            this.txtCidade.Location = new System.Drawing.Point(448, 175);
+            this.txtCidade.MaxLength = 100;
+            this.txtCidade.Name = "txtCidade";
+            this.txtCidade.Size = new System.Drawing.Size(94, 24);
+            this.txtCidade.TabIndex = 9;
+            // 
             // frmFuncinarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -455,24 +455,9 @@ namespace MercadoSA
         private System.Windows.Forms.TextBox txtCodigo;
         private System.Windows.Forms.Label lblCodigo;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
-        private System.Windows.Forms.TextBox txtCidade;
-        private System.Windows.Forms.Label lblCidade;
-        private System.Windows.Forms.ComboBox cbbEstado;
-        private System.Windows.Forms.Label lblEstado;
-        private System.Windows.Forms.TextBox txtBairro;
         private System.Windows.Forms.Label lblBairro;
         private System.Windows.Forms.TextBox txtNumero;
         private System.Windows.Forms.Label lblNumero;
-        private System.Windows.Forms.MaskedTextBox mskCEP;
-        private System.Windows.Forms.Label lblCEP;
-        private System.Windows.Forms.TextBox txtEndereco;
-        private System.Windows.Forms.Label lblEndereco;
-        private System.Windows.Forms.TextBox txtEmail;
-        private System.Windows.Forms.Label lblEmail;
-        private System.Windows.Forms.DateTimePicker dtpDataDNascimento;
-        private System.Windows.Forms.Label lblDataDNascimento;
-        private System.Windows.Forms.MaskedTextBox mskCPF;
-        private System.Windows.Forms.Label lblCPF;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnVoltar;
         private System.Windows.Forms.Button btnLimpar;
@@ -483,5 +468,20 @@ namespace MercadoSA
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnCadastrar;
         private System.Windows.Forms.Button btnNovo;
+        private System.Windows.Forms.TextBox txtCidade;
+        private System.Windows.Forms.Label lblCidade;
+        private System.Windows.Forms.ComboBox cbbEstado;
+        private System.Windows.Forms.Label lblEstado;
+        private System.Windows.Forms.TextBox txtBairro;
+        private System.Windows.Forms.MaskedTextBox mskCEP;
+        private System.Windows.Forms.Label lblCEP;
+        private System.Windows.Forms.TextBox txtEndereco;
+        private System.Windows.Forms.Label lblEndereco;
+        private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.Label lblEmail;
+        private System.Windows.Forms.DateTimePicker dtpDataDNascimento;
+        private System.Windows.Forms.Label lblDataDNascimento;
+        private System.Windows.Forms.MaskedTextBox mskCPF;
+        private System.Windows.Forms.Label lblCPF;
     }
 }
