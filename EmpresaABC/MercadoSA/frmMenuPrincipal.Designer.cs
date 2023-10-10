@@ -87,6 +87,7 @@ namespace MercadoSA
             this.btmUsuarios.Text = "&Usuários";
             this.btmUsuarios.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btmUsuarios.UseVisualStyleBackColor = true;
+            this.btmUsuarios.Click += new System.EventHandler(this.btmUsuarios_Click);
             // 
             // btmFornecedores
             // 

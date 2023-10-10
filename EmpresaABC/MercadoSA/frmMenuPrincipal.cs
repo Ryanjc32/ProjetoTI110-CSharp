@@ -46,5 +46,12 @@ namespace MercadoSA
             abrir.Show();
             this.Hide();
         }
+
+        private void btmUsuarios_Click(object sender, EventArgs e)
+        {
+            frmCadastroUsuarios abrir = new frmCadastroUsuarios();
+            abrir.Show();
+            this.Hide();
+        }
     }
 }
