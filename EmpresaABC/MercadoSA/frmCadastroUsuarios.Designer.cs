@@ -49,11 +49,11 @@ namespace MercadoSA
             this.lblCodigo = new System.Windows.Forms.Label();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.gpbFuncionario = new System.Windows.Forms.GroupBox();
-            this.txtRepetirSenha = new System.Windows.Forms.TextBox();
-            this.lblFunc = new System.Windows.Forms.Label();
-            this.lblCodigoFunc = new System.Windows.Forms.Label();
-            this.lstFuncSemUsu = new System.Windows.Forms.ListBox();
             this.txtCodFunc = new System.Windows.Forms.TextBox();
+            this.lstFuncSemUsu = new System.Windows.Forms.ListBox();
+            this.lblCodigoFunc = new System.Windows.Forms.Label();
+            this.lblFunc = new System.Windows.Forms.Label();
+            this.txtRepetirSenha = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.gpbFuncionario.SuspendLayout();
             this.SuspendLayout();
@@ -99,6 +99,7 @@ namespace MercadoSA
             this.btnLimpar.Text = "&Limpar";
             this.btnLimpar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnLimpar.UseVisualStyleBackColor = true;
+            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
             // 
             // btnPesquisar
             // 
@@ -135,6 +136,7 @@ namespace MercadoSA
             this.btnAlterar.Text = "&Alterar";
             this.btnAlterar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnAlterar.UseVisualStyleBackColor = true;
+            this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
             // 
             // btnCadastrar
             // 
@@ -271,33 +273,12 @@ namespace MercadoSA
             this.gpbFuncionario.TabStop = false;
             this.gpbFuncionario.Text = "Dados";
             // 
-            // txtRepetirSenha
+            // txtCodFunc
             // 
-            this.txtRepetirSenha.Font = new System.Drawing.Font("Wingdings", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.txtRepetirSenha.Location = new System.Drawing.Point(207, 198);
-            this.txtRepetirSenha.MaxLength = 10;
-            this.txtRepetirSenha.Name = "txtRepetirSenha";
-            this.txtRepetirSenha.PasswordChar = 'l';
-            this.txtRepetirSenha.Size = new System.Drawing.Size(158, 24);
-            this.txtRepetirSenha.TabIndex = 4;
-            // 
-            // lblFunc
-            // 
-            this.lblFunc.AutoSize = true;
-            this.lblFunc.Location = new System.Drawing.Point(588, 32);
-            this.lblFunc.Name = "lblFunc";
-            this.lblFunc.Size = new System.Drawing.Size(191, 18);
-            this.lblFunc.TabIndex = 10;
-            this.lblFunc.Text = "Funcionarios sem Usúarios";
-            // 
-            // lblCodigoFunc
-            // 
-            this.lblCodigoFunc.AutoSize = true;
-            this.lblCodigoFunc.Location = new System.Drawing.Point(204, 283);
-            this.lblCodigoFunc.Name = "lblCodigoFunc";
-            this.lblCodigoFunc.Size = new System.Drawing.Size(138, 18);
-            this.lblCodigoFunc.TabIndex = 12;
-            this.lblCodigoFunc.Text = "Código Funcionário";
+            this.txtCodFunc.Location = new System.Drawing.Point(371, 277);
+            this.txtCodFunc.Name = "txtCodFunc";
+            this.txtCodFunc.Size = new System.Drawing.Size(100, 24);
+            this.txtCodFunc.TabIndex = 14;
             // 
             // lstFuncSemUsu
             // 
@@ -309,12 +290,33 @@ namespace MercadoSA
             this.lstFuncSemUsu.TabIndex = 13;
             this.lstFuncSemUsu.SelectedIndexChanged += new System.EventHandler(this.lstFuncSemUsu_SelectedIndexChanged);
             // 
-            // txtCodFunc
+            // lblCodigoFunc
             // 
-            this.txtCodFunc.Location = new System.Drawing.Point(371, 277);
-            this.txtCodFunc.Name = "txtCodFunc";
-            this.txtCodFunc.Size = new System.Drawing.Size(100, 24);
-            this.txtCodFunc.TabIndex = 14;
+            this.lblCodigoFunc.AutoSize = true;
+            this.lblCodigoFunc.Location = new System.Drawing.Point(204, 283);
+            this.lblCodigoFunc.Name = "lblCodigoFunc";
+            this.lblCodigoFunc.Size = new System.Drawing.Size(138, 18);
+            this.lblCodigoFunc.TabIndex = 12;
+            this.lblCodigoFunc.Text = "Código Funcionário";
+            // 
+            // lblFunc
+            // 
+            this.lblFunc.AutoSize = true;
+            this.lblFunc.Location = new System.Drawing.Point(588, 32);
+            this.lblFunc.Name = "lblFunc";
+            this.lblFunc.Size = new System.Drawing.Size(191, 18);
+            this.lblFunc.TabIndex = 10;
+            this.lblFunc.Text = "Funcionarios sem Usúarios";
+            // 
+            // txtRepetirSenha
+            // 
+            this.txtRepetirSenha.Font = new System.Drawing.Font("Wingdings", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.txtRepetirSenha.Location = new System.Drawing.Point(207, 198);
+            this.txtRepetirSenha.MaxLength = 10;
+            this.txtRepetirSenha.Name = "txtRepetirSenha";
+            this.txtRepetirSenha.PasswordChar = 'l';
+            this.txtRepetirSenha.Size = new System.Drawing.Size(158, 24);
+            this.txtRepetirSenha.TabIndex = 4;
             // 
             // frmCadastroUsuarios
             // 
