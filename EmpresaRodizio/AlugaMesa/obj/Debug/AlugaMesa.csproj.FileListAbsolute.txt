@@ -1,0 +1,12 @@
+C:\Users\ryan.jcavalcanti\Documents\Visual Studio 2019\ProjetoTI110\EmpresaRodizio\AlugaMesa\bin\Debug\AlugaMesa.exe.config
+C:\Users\ryan.jcavalcanti\Documents\Visual Studio 2019\ProjetoTI110\EmpresaRodizio\AlugaMesa\bin\Debug\AlugaMesa.exe
+C:\Users\ryan.jcavalcanti\Documents\Visual Studio 2019\ProjetoTI110\EmpresaRodizio\AlugaMesa\bin\Debug\AlugaMesa.pdb
+C:\Users\ryan.jcavalcanti\Documents\Visual Studio 2019\ProjetoTI110\EmpresaRodizio\AlugaMesa\obj\Debug\AlugaMesa.csproj.AssemblyReference.cache
+C:\Users\ryan.jcavalcanti\Documents\Visual Studio 2019\ProjetoTI110\EmpresaRodizio\AlugaMesa\obj\Debug\AlugaMesa.frmAlugarMesa.resources
+C:\Users\ryan.jcavalcanti\Documents\Visual Studio 2019\ProjetoTI110\EmpresaRodizio\AlugaMesa\obj\Debug\AlugaMesa.frmCadastrarMesas.resources
+C:\Users\ryan.jcavalcanti\Documents\Visual Studio 2019\ProjetoTI110\EmpresaRodizio\AlugaMesa\obj\Debug\AlugaMesa.frmMenuPrincipal.resources
+C:\Users\ryan.jcavalcanti\Documents\Visual Studio 2019\ProjetoTI110\EmpresaRodizio\AlugaMesa\obj\Debug\AlugaMesa.Properties.Resources.resources
+C:\Users\ryan.jcavalcanti\Documents\Visual Studio 2019\ProjetoTI110\EmpresaRodizio\AlugaMesa\obj\Debug\AlugaMesa.csproj.GenerateResource.cache
+C:\Users\ryan.jcavalcanti\Documents\Visual Studio 2019\ProjetoTI110\EmpresaRodizio\AlugaMesa\obj\Debug\AlugaMesa.csproj.CoreCompileInputs.cache
+C:\Users\ryan.jcavalcanti\Documents\Visual Studio 2019\ProjetoTI110\EmpresaRodizio\AlugaMesa\obj\Debug\AlugaMesa.exe
+C:\Users\ryan.jcavalcanti\Documents\Visual Studio 2019\ProjetoTI110\EmpresaRodizio\AlugaMesa\obj\Debug\AlugaMesa.pdb
