@@ -30,8 +30,6 @@ namespace AlugaMesa
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAlugarMesa));
-            this.lblCodDoAluguel = new System.Windows.Forms.Label();
-            this.btnNovo = new System.Windows.Forms.Button();
             this.btnAlugar = new System.Windows.Forms.Button();
             this.btnLiberar = new System.Windows.Forms.Button();
             this.btnLimpar = new System.Windows.Forms.Button();
@@ -40,38 +38,15 @@ namespace AlugaMesa
             this.lblNomeCli = new System.Windows.Forms.Label();
             this.lblCodMesa = new System.Windows.Forms.Label();
             this.lblStatusDoAluguel = new System.Windows.Forms.Label();
-            this.txtCodDoAluguel = new System.Windows.Forms.TextBox();
             this.txtNomeCli = new System.Windows.Forms.TextBox();
             this.txtCodMesa = new System.Windows.Forms.TextBox();
             this.txtStatusDoAluguel = new System.Windows.Forms.TextBox();
             this.gpbPesquisarMesas = new System.Windows.Forms.GroupBox();
-            this.rdbDisponivel = new System.Windows.Forms.RadioButton();
-            this.rdbIndisponivel = new System.Windows.Forms.RadioButton();
             this.lstPesquisar = new System.Windows.Forms.ListBox();
+            this.rdbIndisponivel = new System.Windows.Forms.RadioButton();
+            this.rdbDisponivel = new System.Windows.Forms.RadioButton();
             this.gpbPesquisarMesas.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // lblCodDoAluguel
-            // 
-            this.lblCodDoAluguel.AutoSize = true;
-            this.lblCodDoAluguel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCodDoAluguel.Location = new System.Drawing.Point(85, 82);
-            this.lblCodDoAluguel.Name = "lblCodDoAluguel";
-            this.lblCodDoAluguel.Size = new System.Drawing.Size(138, 20);
-            this.lblCodDoAluguel.TabIndex = 0;
-            this.lblCodDoAluguel.Text = "Código do Aluguel";
-            // 
-            // btnNovo
-            // 
-            this.btnNovo.Image = ((System.Drawing.Image)(resources.GetObject("btnNovo.Image")));
-            this.btnNovo.Location = new System.Drawing.Point(45, 392);
-            this.btnNovo.Name = "btnNovo";
-            this.btnNovo.Size = new System.Drawing.Size(115, 57);
-            this.btnNovo.TabIndex = 5;
-            this.btnNovo.Text = "&Novo";
-            this.btnNovo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnNovo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnNovo.UseVisualStyleBackColor = true;
             // 
             // btnAlugar
             // 
@@ -96,6 +71,7 @@ namespace AlugaMesa
             this.btnLiberar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnLiberar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnLiberar.UseVisualStyleBackColor = true;
+            this.btnLiberar.Click += new System.EventHandler(this.btnLiberar_Click);
             // 
             // btnLimpar
             // 
@@ -108,6 +84,7 @@ namespace AlugaMesa
             this.btnLimpar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnLimpar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnLimpar.UseVisualStyleBackColor = true;
+            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
             // 
             // btnVoltar
             // 
@@ -130,12 +107,13 @@ namespace AlugaMesa
             this.btnPesquisar.TabIndex = 10;
             this.btnPesquisar.Text = "&Pesquisar";
             this.btnPesquisar.UseVisualStyleBackColor = true;
+            this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);
             // 
             // lblNomeCli
             // 
             this.lblNomeCli.AutoSize = true;
             this.lblNomeCli.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNomeCli.Location = new System.Drawing.Point(85, 128);
+            this.lblNomeCli.Location = new System.Drawing.Point(66, 65);
             this.lblNomeCli.Name = "lblNomeCli";
             this.lblNomeCli.Size = new System.Drawing.Size(126, 20);
             this.lblNomeCli.TabIndex = 11;
@@ -145,7 +123,7 @@ namespace AlugaMesa
             // 
             this.lblCodMesa.AutoSize = true;
             this.lblCodMesa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCodMesa.Location = new System.Drawing.Point(85, 175);
+            this.lblCodMesa.Location = new System.Drawing.Point(66, 121);
             this.lblCodMesa.Name = "lblCodMesa";
             this.lblCodMesa.Size = new System.Drawing.Size(124, 20);
             this.lblCodMesa.TabIndex = 12;
@@ -155,36 +133,29 @@ namespace AlugaMesa
             // 
             this.lblStatusDoAluguel.AutoSize = true;
             this.lblStatusDoAluguel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblStatusDoAluguel.Location = new System.Drawing.Point(85, 219);
+            this.lblStatusDoAluguel.Location = new System.Drawing.Point(66, 172);
             this.lblStatusDoAluguel.Name = "lblStatusDoAluguel";
             this.lblStatusDoAluguel.Size = new System.Drawing.Size(135, 20);
             this.lblStatusDoAluguel.TabIndex = 13;
             this.lblStatusDoAluguel.Text = "Status do Aluguel";
             // 
-            // txtCodDoAluguel
-            // 
-            this.txtCodDoAluguel.Location = new System.Drawing.Point(238, 84);
-            this.txtCodDoAluguel.Name = "txtCodDoAluguel";
-            this.txtCodDoAluguel.Size = new System.Drawing.Size(115, 20);
-            this.txtCodDoAluguel.TabIndex = 14;
-            // 
             // txtNomeCli
             // 
-            this.txtNomeCli.Location = new System.Drawing.Point(238, 130);
+            this.txtNomeCli.Location = new System.Drawing.Point(212, 67);
             this.txtNomeCli.Name = "txtNomeCli";
             this.txtNomeCli.Size = new System.Drawing.Size(115, 20);
             this.txtNomeCli.TabIndex = 15;
             // 
             // txtCodMesa
             // 
-            this.txtCodMesa.Location = new System.Drawing.Point(238, 177);
+            this.txtCodMesa.Location = new System.Drawing.Point(212, 121);
             this.txtCodMesa.Name = "txtCodMesa";
             this.txtCodMesa.Size = new System.Drawing.Size(115, 20);
             this.txtCodMesa.TabIndex = 16;
             // 
             // txtStatusDoAluguel
             // 
-            this.txtStatusDoAluguel.Location = new System.Drawing.Point(238, 219);
+            this.txtStatusDoAluguel.Location = new System.Drawing.Point(212, 172);
             this.txtStatusDoAluguel.Name = "txtStatusDoAluguel";
             this.txtStatusDoAluguel.Size = new System.Drawing.Size(115, 20);
             this.txtStatusDoAluguel.TabIndex = 17;
@@ -203,16 +174,14 @@ namespace AlugaMesa
             this.gpbPesquisarMesas.TabStop = false;
             this.gpbPesquisarMesas.Text = "Pesquisar Mesas";
             // 
-            // rdbDisponivel
+            // lstPesquisar
             // 
-            this.rdbDisponivel.AutoSize = true;
-            this.rdbDisponivel.Location = new System.Drawing.Point(10, 36);
-            this.rdbDisponivel.Name = "rdbDisponivel";
-            this.rdbDisponivel.Size = new System.Drawing.Size(99, 24);
-            this.rdbDisponivel.TabIndex = 0;
-            this.rdbDisponivel.TabStop = true;
-            this.rdbDisponivel.Text = "Disponível";
-            this.rdbDisponivel.UseVisualStyleBackColor = true;
+            this.lstPesquisar.FormattingEnabled = true;
+            this.lstPesquisar.ItemHeight = 20;
+            this.lstPesquisar.Location = new System.Drawing.Point(49, 88);
+            this.lstPesquisar.Name = "lstPesquisar";
+            this.lstPesquisar.Size = new System.Drawing.Size(212, 144);
+            this.lstPesquisar.TabIndex = 11;
             // 
             // rdbIndisponivel
             // 
@@ -225,14 +194,16 @@ namespace AlugaMesa
             this.rdbIndisponivel.Text = "Indisponível";
             this.rdbIndisponivel.UseVisualStyleBackColor = true;
             // 
-            // lstPesquisar
+            // rdbDisponivel
             // 
-            this.lstPesquisar.FormattingEnabled = true;
-            this.lstPesquisar.ItemHeight = 20;
-            this.lstPesquisar.Location = new System.Drawing.Point(49, 88);
-            this.lstPesquisar.Name = "lstPesquisar";
-            this.lstPesquisar.Size = new System.Drawing.Size(212, 144);
-            this.lstPesquisar.TabIndex = 11;
+            this.rdbDisponivel.AutoSize = true;
+            this.rdbDisponivel.Location = new System.Drawing.Point(10, 36);
+            this.rdbDisponivel.Name = "rdbDisponivel";
+            this.rdbDisponivel.Size = new System.Drawing.Size(99, 24);
+            this.rdbDisponivel.TabIndex = 0;
+            this.rdbDisponivel.TabStop = true;
+            this.rdbDisponivel.Text = "Disponível";
+            this.rdbDisponivel.UseVisualStyleBackColor = true;
             // 
             // frmAlugarMesa
             // 
@@ -243,7 +214,6 @@ namespace AlugaMesa
             this.Controls.Add(this.txtStatusDoAluguel);
             this.Controls.Add(this.txtCodMesa);
             this.Controls.Add(this.txtNomeCli);
-            this.Controls.Add(this.txtCodDoAluguel);
             this.Controls.Add(this.lblStatusDoAluguel);
             this.Controls.Add(this.lblCodMesa);
             this.Controls.Add(this.lblNomeCli);
@@ -251,8 +221,6 @@ namespace AlugaMesa
             this.Controls.Add(this.btnLimpar);
             this.Controls.Add(this.btnLiberar);
             this.Controls.Add(this.btnAlugar);
-            this.Controls.Add(this.btnNovo);
-            this.Controls.Add(this.lblCodDoAluguel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
@@ -267,9 +235,6 @@ namespace AlugaMesa
         }
 
         #endregion
-
-        private System.Windows.Forms.Label lblCodDoAluguel;
-        private System.Windows.Forms.Button btnNovo;
         private System.Windows.Forms.Button btnAlugar;
         private System.Windows.Forms.Button btnLiberar;
         private System.Windows.Forms.Button btnLimpar;
@@ -278,7 +243,6 @@ namespace AlugaMesa
         private System.Windows.Forms.Label lblNomeCli;
         private System.Windows.Forms.Label lblCodMesa;
         private System.Windows.Forms.Label lblStatusDoAluguel;
-        private System.Windows.Forms.TextBox txtCodDoAluguel;
         private System.Windows.Forms.TextBox txtNomeCli;
         private System.Windows.Forms.TextBox txtCodMesa;
         private System.Windows.Forms.TextBox txtStatusDoAluguel;
