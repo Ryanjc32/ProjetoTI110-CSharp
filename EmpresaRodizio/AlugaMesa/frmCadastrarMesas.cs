@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace AlugaMesa
 {
@@ -31,11 +32,9 @@ namespace AlugaMesa
             btnAlterar.Enabled = false;
             btnExcluir.Enabled = false;
             btnLimpar.Enabled = false;
-            txtIdentDaMesa.Enabled = false;
-            txtQntdDeCad.Enabled = false;
+            txtQntdDeCad.Enabled = true;
 
-            rdbDisponivel.Enabled = false;
-            rdbIndisponivel.Enabled = false;
+
 
             rdbDisponiveis.Enabled = true;
             rdbIndisponiveis.Enabled = true;
@@ -51,10 +50,8 @@ namespace AlugaMesa
             btnAlterar.Enabled = true;
             btnExcluir.Enabled = true;
             btnLimpar.Enabled = true;
-            txtIdentDaMesa.Enabled = true;
             txtQntdDeCad.Enabled = true;
-            rdbDisponivel.Enabled = true;
-            rdbIndisponivel.Enabled = true;
+
         }
 
         //desabilitar botão novo
@@ -75,11 +72,9 @@ namespace AlugaMesa
             btnAlterar.Enabled = true;
             btnLimpar.Enabled = true;
 
-            txtIdentDaMesa.Enabled = true;
+
             txtQntdDeCad.Enabled = true;
-            gpbStatus.Enabled = true;
-            rdbIndisponivel.Enabled = true;
-            rdbDisponivel.Enabled = true;
+
         }
 
         private void btnNovo_Click(object sender, EventArgs e)
@@ -90,10 +85,9 @@ namespace AlugaMesa
         }
         public void limparCampos()
         {
-            txtIdentDaMesa.Clear();
+
             txtQntdDeCad.Clear();
-            rdbDisponivel.Checked = false;
-            rdbIndisponivel.Checked = false;
+
 
         }
 
@@ -105,6 +99,7 @@ namespace AlugaMesa
 
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
+            botaoCadastar();
             limparCampos();
             desabilitarCampos();
         }
@@ -128,8 +123,48 @@ namespace AlugaMesa
 
         private void btnPesquisar_Click(object sender, EventArgs e)
         {
-
+            pesquisarMesa();
             habilitarCamposPesquisar();
         }
+
+        //Função botão cadastrar
+        public int botaoCadastar()
+        {
+            MySqlCommand comm = new MySqlCommand();
+            comm.CommandText = "insert into tbMesa(qtdCad,status)values(@qtdCad,@status);";
+            comm.CommandType = CommandType.Text;
+
+            comm.Parameters.Clear();
+            comm.Parameters.Add("@status", MySqlDbType.VarChar, 15).Value = txtStatus.Text;
+            comm.Parameters.Add("@qtdCad", MySqlDbType.Int32).Value = txtQntdDeCad.Text;
+
+            comm.Connection = conexao.obterConexao();
+            int res = comm.ExecuteNonQuery();
+
+            conexao.fecharConexao();
+            return res;
+        }
+        public void pesquisarMesa()
+        {
+            MySqlCommand comm = new MySqlCommand();
+            comm.CommandText = "select idMesa, qtdCad from tbMesa where status = 'DISPONIVEL';";
+            comm.CommandType = CommandType.Text;
+
+            comm.Connection = conexao.obterConexao();
+
+            //Carregando dados para objeto de tabela 
+            MySqlDataReader DR;
+
+
+            DR = comm.ExecuteReader();
+            lstPesquisar.Items.Clear();
+            while (DR.Read())
+            {
+                lstPesquisar.Items.Add(DR.GetString(0));
+            }
+
+            conexao.fecharConexao();
+
+        }
+
     }
-}
