@@ -39,3 +39,10 @@ C:\Users\ryan.jcavalcanti\Documents\Visual Studio 2019\ProjetoTI110\EmpresaABC\M
 C:\Users\ryan.jcavalcanti\Documents\Visual Studio 2019\ProjetoTI110\EmpresaABC\MercadoSA\obj\x64\Debug\MercadoSA.csproj.CopyComplete
 C:\Users\ryan.jcavalcanti\Documents\Visual Studio 2019\ProjetoTI110\EmpresaABC\MercadoSA\obj\x64\Debug\MercadoSA.frmCadastroUsuarios.resources
 C:\Users\ryan.jcavalcanti\Documents\Visual Studio 2019\ProjetoTI110\EmpresaABC\MercadoSA\obj\x64\Debug\MercadoSA.PesquisarUsuarios.resources
+C:\Users\ryan.jcavalcanti\Documents\Visual Studio 2019\ProjetoTI110\EmpresaABC\MercadoSA\obj\x64\Debug\MercadoSA.frmWebcam.resources
+C:\Users\ryan.jcavalcanti\Documents\Visual Studio 2019\ProjetoTI110\EmpresaABC\MercadoSA\bin\x64\Debug\AForge.dll
+C:\Users\ryan.jcavalcanti\Documents\Visual Studio 2019\ProjetoTI110\EmpresaABC\MercadoSA\bin\x64\Debug\AForge.Video.DirectShow.dll
+C:\Users\ryan.jcavalcanti\Documents\Visual Studio 2019\ProjetoTI110\EmpresaABC\MercadoSA\bin\x64\Debug\AForge.Video.dll
+C:\Users\ryan.jcavalcanti\Documents\Visual Studio 2019\ProjetoTI110\EmpresaABC\MercadoSA\bin\x64\Debug\AForge.xml
+C:\Users\ryan.jcavalcanti\Documents\Visual Studio 2019\ProjetoTI110\EmpresaABC\MercadoSA\bin\x64\Debug\AForge.Video.xml
+C:\Users\ryan.jcavalcanti\Documents\Visual Studio 2019\ProjetoTI110\EmpresaABC\MercadoSA\bin\x64\Debug\AForge.Video.DirectShow.xml
