@@ -31,6 +31,9 @@ namespace CalcularGorgeta
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmGorjeta));
             this.gpbCalculadoraGorjeta = new System.Windows.Forms.GroupBox();
+            this.txtCodigo = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.cbbQualidade = new System.Windows.Forms.ComboBox();
             this.txtValorTotal = new System.Windows.Forms.TextBox();
             this.txtValorDaGorjeta = new System.Windows.Forms.TextBox();
             this.btnCalcularGorjeta = new System.Windows.Forms.Button();
@@ -41,9 +44,6 @@ namespace CalcularGorgeta
             this.txtValorDaConta = new System.Windows.Forms.TextBox();
             this.btnVoltar = new System.Windows.Forms.Button();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
-            this.cbbQualidade = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtCodigo = new System.Windows.Forms.TextBox();
             this.gpbCalculadoraGorjeta.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -68,6 +68,35 @@ namespace CalcularGorgeta
             this.gpbCalculadoraGorjeta.TabStop = false;
             this.gpbCalculadoraGorjeta.Text = "Calculadora de Gorjeta";
             this.gpbCalculadoraGorjeta.Enter += new System.EventHandler(this.gpbCalculadoraGorjeta_Enter);
+            // 
+            // txtCodigo
+            // 
+            this.txtCodigo.Location = new System.Drawing.Point(535, 71);
+            this.txtCodigo.Name = "txtCodigo";
+            this.txtCodigo.Size = new System.Drawing.Size(103, 26);
+            this.txtCodigo.TabIndex = 11;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(531, 36);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(59, 20);
+            this.label2.TabIndex = 10;
+            this.label2.Text = "Código";
+            // 
+            // cbbQualidade
+            // 
+            this.cbbQualidade.FormattingEnabled = true;
+            this.cbbQualidade.Items.AddRange(new object[] {
+            "Execelente -10%",
+            "Ótimo - 8%",
+            "Bom - 5%",
+            "Ruim - 2%"});
+            this.cbbQualidade.Location = new System.Drawing.Point(54, 169);
+            this.cbbQualidade.Name = "cbbQualidade";
+            this.cbbQualidade.Size = new System.Drawing.Size(409, 28);
+            this.cbbQualidade.TabIndex = 9;
             // 
             // txtValorTotal
             // 
@@ -149,35 +178,6 @@ namespace CalcularGorgeta
             this.btnVoltar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnVoltar.UseVisualStyleBackColor = true;
             this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
-            // 
-            // cbbQualidade
-            // 
-            this.cbbQualidade.FormattingEnabled = true;
-            this.cbbQualidade.Items.AddRange(new object[] {
-            "Execelente -10%",
-            "Ótimo - 8%",
-            "Bom - 5%",
-            "Ruim - 2%"});
-            this.cbbQualidade.Location = new System.Drawing.Point(54, 169);
-            this.cbbQualidade.Name = "cbbQualidade";
-            this.cbbQualidade.Size = new System.Drawing.Size(409, 28);
-            this.cbbQualidade.TabIndex = 9;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(531, 36);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(59, 20);
-            this.label2.TabIndex = 10;
-            this.label2.Text = "Código";
-            // 
-            // txtCodigo
-            // 
-            this.txtCodigo.Location = new System.Drawing.Point(535, 71);
-            this.txtCodigo.Name = "txtCodigo";
-            this.txtCodigo.Size = new System.Drawing.Size(103, 26);
-            this.txtCodigo.TabIndex = 11;
             // 
             // frmGorjeta
             // 

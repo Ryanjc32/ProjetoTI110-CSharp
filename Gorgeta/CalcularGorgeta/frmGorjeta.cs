@@ -44,7 +44,7 @@ namespace CalcularGorgeta
             if (cbbQualidade.SelectedIndex == 0)
             {
                 txtValorDaGorjeta.Text = Convert.ToString(valor * 0.01);
-                txtValorTotal.Text = Convert.ToString(valor +(valor * 0.1));
+                txtValorTotal.Text = Convert.ToString(valor + (valor * 0.1));
 
             }
             if (cbbQualidade.SelectedIndex == 1)
@@ -65,8 +65,18 @@ namespace CalcularGorgeta
                 txtValorTotal.Text = Convert.ToString(valor + (valor * 0.2));
 
             }
+            limparCampos();
         }
-        // carrega código
+
+        //Limpar Campos
+
+        public void limparCampos()
+        {
+            txtValorDaConta.Clear();
+        }
+
+
+        //carrega código
         public void carregaCodigo()
         {
             MySqlCommand comm = new MySqlCommand();
@@ -74,13 +84,11 @@ namespace CalcularGorgeta
             comm.CommandType = CommandType.Text;
 
             comm.Connection = frmConexao.obterConexao();
-            MySqlDataReader DR;
-            DR = comm.ExecuteReader();
+            MySqlDataReader DR = comm.ExecuteReader();
             DR.Read();
+            txtCodigo.Text = Convert.ToString(DR.GetString(1));
 
-            txtCodigo.Text = Convert.ToString(DR.GetString(0));
-
-            frmConexao.fecharConexao();
+           
 
         }
     }
