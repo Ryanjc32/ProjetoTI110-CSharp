@@ -68,3 +68,4 @@ C:\Users\Ryan\Documents\C#\ProjetoTI110-CSharp\Gorgeta\CalcularGorgeta\obj\Debug
 C:\Users\Ryan\Documents\C#\ProjetoTI110-CSharp\Gorgeta\CalcularGorgeta\obj\Debug\CalcularGorgeta.csproj.CopyComplete
 C:\Users\Ryan\Documents\C#\ProjetoTI110-CSharp\Gorgeta\CalcularGorgeta\obj\Debug\CalcularGorgeta.exe
 C:\Users\Ryan\Documents\C#\ProjetoTI110-CSharp\Gorgeta\CalcularGorgeta\obj\Debug\CalcularGorgeta.pdb
+C:\Users\Ryan\Documents\C#\ProjetoTI110-CSharp\Gorgeta\CalcularGorgeta\obj\Debug\CalcularGorgeta.frmFuncionarios.resources
