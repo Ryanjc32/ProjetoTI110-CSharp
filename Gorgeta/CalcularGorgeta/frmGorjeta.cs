@@ -16,7 +16,7 @@ namespace CalcularGorgeta
         public frmGorjeta()
         {
             InitializeComponent();
-            carregaCodigo();
+          carregaCodigo();
         }
 
         private void btnVoltar_Click(object sender, EventArgs e)
@@ -55,30 +55,31 @@ namespace CalcularGorgeta
                 double valor = Convert.ToInt32(txtValorDaConta.Text);
                 if (cbbQualidade.SelectedIndex == 0)
                 {
-                    txtValorGorjeta.Text = Convert.ToString(valor * 0.01);
-                    txtValorTotal.Text = Convert.ToString(valor + (valor * 0.1));
+                    txtValorGorjeta.Text = Convert.ToString(valor * 0.10);
+                    txtValorTotal.Text = Convert.ToString(valor + (valor * 0.10));
 
                 }
                 if (cbbQualidade.SelectedIndex == 1)
                 {
                     txtValorGorjeta.Text = Convert.ToString(valor * 0.08);
-                    txtValorTotal.Text = Convert.ToString(valor + (valor * 0.8));
+                    txtValorTotal.Text = Convert.ToString(valor + (valor * 0.08));
 
                 }
                 if (cbbQualidade.SelectedIndex == 2)
                 {
                     txtValorGorjeta.Text = Convert.ToString(valor * 0.05);
-                    txtValorTotal.Text = Convert.ToString(valor + (valor * 0.5));
+                    txtValorTotal.Text = Convert.ToString(valor + (valor * 0.05));
 
                 }
                 if (cbbQualidade.SelectedIndex == 3)
                 {
                     txtValorGorjeta.Text = Convert.ToString(valor * 0.02);
-                    txtValorTotal.Text = Convert.ToString(valor + (valor * 0.2));
+                    txtValorTotal.Text = Convert.ToString(valor + (valor * 0.02));
 
                 }
                 desabilitarCampos();
                 habilitarCampos();
+                
 
             }
             catch
@@ -92,9 +93,9 @@ namespace CalcularGorgeta
         public void limparCampos()
         {
             txtValorDaConta.Clear();
+            txtValorDaConta.Clear();
             txtValorGorjeta.Clear();
             txtValorTotal.Clear();
-
         }
 
 
@@ -107,6 +108,7 @@ namespace CalcularGorgeta
 
             comm.Connection = frmConexao.obterConexao();
             MySqlDataReader DR = comm.ExecuteReader();
+           
             DR.Read();
             txtCodigo.Text = Convert.ToString(DR.GetString(0));
 
@@ -117,13 +119,12 @@ namespace CalcularGorgeta
         public int salvarNoBanco()
         {
             MySqlCommand comm = new MySqlCommand();
-            comm.CommandText = "insert into tbGorjeta(avaliacao,nome,valorConta,valorGorjeta,valorTotal)values(@avaliacao,@nome,@valorConta,@valorGorjeta,@valorTotal);";
+            comm.CommandText = "insert into tbGorjeta(avaliacao,valorConta,valorGorjeta,valorTotal)values(@avaliacao,@valorConta,@valorGorjeta,@valorTotal);";
             comm.CommandType = CommandType.Text;
 
             comm.Parameters.Clear();
 
             comm.Parameters.Add("@avaliacao", MySqlDbType.VarChar, 100).Value = cbbQualidade.Text;
-            comm.Parameters.Add("@nome", MySqlDbType.VarChar, 100).Value = txtNome.Text;
             comm.Parameters.Add("@valorConta", MySqlDbType.VarChar, 100).Value = txtValorDaConta.Text;
             comm.Parameters.Add("@valorGorjeta", MySqlDbType.VarChar, 100).Value = txtValorGorjeta.Text;
             comm.Parameters.Add("@valorTotal", MySqlDbType.VarChar, 100).Value = txtValorTotal.Text;
@@ -141,6 +142,64 @@ namespace CalcularGorgeta
         {
             salvarNoBanco();
             limparCampos();
+        }
+        public void excluirCodConta(int codigo)
+        {
+            MySqlCommand comm = new MySqlCommand();
+          //  comm.CommandText = "delete from tbGorjeta where codConta = @codConta;";
+            comm.CommandType = CommandType.Text;
+
+            comm.Parameters.Clear();
+            comm.Parameters.Add("@codConta", MySqlDbType.Int32).Value = codigo;
+
+            comm.Connection = frmConexao.obterConexao();
+            comm.ExecuteNonQuery();
+
+            frmConexao.fecharConexao();
+        }
+
+        private void btnExcluir_Click(object sender, EventArgs e)
+        {
+            DialogResult resp = MessageBox.Show("Deseja excluir?", "Mensagem do Sistema", MessageBoxButtons.YesNo, MessageBoxIcon.Information, MessageBoxDefaultButton.Button2);
+            if ( resp == DialogResult.Yes)
+            {
+                excluirCodConta(Convert.ToInt32(txtCodigo.Text));
+                limparCampos();
+            }
+            else
+            {
+
+            }
+        }
+
+        private void btnLimpar_Click(object sender, EventArgs e)
+        {
+            limparCampos();
+        }
+         //carrega nome
+
+        public void carregarNome(string nome)
+        {
+            MySqlCommand comm = new MySqlCommand();
+
+            comm.CommandText = "select nome from tbFuncionarios where nome like'%" + nome + "%'";
+            comm.CommandType = CommandType.Text;
+
+            comm.Parameters.Clear();
+            comm.Parameters.Add("@nome", MySqlDbType.VarChar, 100).Value = nome;
+
+            comm.Connection = frmConexao.obterConexao();
+
+            MySqlDataReader DR;
+            DR = comm.ExecuteReader();
+            DR.Read();
+            cbbNomeFunc.Text = DR.GetString(0);
+            frmConexao.fecharConexao();
+        }
+
+        private void cbbNomeFunc_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            carregarNome(cbbNomeFunc.Text);
         }
     }
 }

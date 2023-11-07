@@ -44,35 +44,6 @@ namespace CalcularGorgeta
         {
             txtNomeFunc.Clear();
             txtSenha.Clear();
-        }
-        public void pesquisarNome()
-        {
-            MySqlCommand comm = new MySqlCommand();
-            comm.CommandText = "select * from tbFuncionarios where nome like '%" + txtPesquisarNome + "%';";
-            comm.CommandType = CommandType.Text;
-
-            comm.Parameters.Clear();
-            comm.Parameters.Add("nome", MySqlDbType.VarChar, 100).Value = txtPesquisarNome.Text;
-
-            comm.Connection = frmConexao.obterConexao();
-
-            //Carregando dados para objeto de tabela 
-
-            MySqlDataReader DR;
-
-            DR = comm.ExecuteReader();
-            lstFuncionarios.Items.Clear();
-            while (DR.Read())
-            {
-                lstFuncionarios.Items.Add(DR.GetString(0));
-            }
-
-            frmConexao.fecharConexao();
-        }
-
-        private void btnPesquisar_Click(object sender, EventArgs e)
-        {
-            pesquisarNome();
-        }
+        }    
     }
 }
