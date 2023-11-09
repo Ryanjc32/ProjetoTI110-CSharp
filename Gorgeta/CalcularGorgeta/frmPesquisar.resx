@@ -118,21 +118,6 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="btnVoltar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        EwAACxMBAJqcGAAAAMVJREFUWEft1TEKwjAUgOEI6ujoHTyHJxD0Hm7OOgmewMndxUFwUXBTELeCiyie
-        wEVw1f+VpAQRcTDJ4PvhG9rltTRNjKZp2pfVsUMnv4pcFWs8sJEbMZPhM8hw0Ua0aljADb+gjCg1cIAb
-        LnoInrxhF3f4w8UAJQSriQyvg303XK0zTjhib22xtOaYWhOMrRGGVtEK7waGVpT8AaSkn8D1aRH2EXQR
-        +iX7Df2SbkSuCvyt+P8OI5ccx7LCW/mVpmnazzLmCazfkj/k/QGqAAAAAElFTkSuQmCC
-</value>
-  </data>
-  <metadata name="folderBrowserDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
-  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>35</value>
-  </metadata>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAkAAAAAAAEAIABS3wAAlgAAAICAAAABACAAKAgBAOjfAABgYAAAAQAgAKiUAAAQ6AEASEgAAAEA

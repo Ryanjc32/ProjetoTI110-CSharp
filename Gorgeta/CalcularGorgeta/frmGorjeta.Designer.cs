@@ -31,8 +31,16 @@ namespace CalcularGorgeta
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmGorjeta));
             this.gpbCalculadoraGorjeta = new System.Windows.Forms.GroupBox();
+            this.btnPesquisar = new System.Windows.Forms.Button();
+            this.cbbNomeFunc = new System.Windows.Forms.ComboBox();
+            this.btnLimpar = new System.Windows.Forms.Button();
+            this.lblNome = new System.Windows.Forms.Label();
+            this.btnSalvar = new System.Windows.Forms.Button();
+            this.txtCodigo = new System.Windows.Forms.TextBox();
+            this.lblCodConta = new System.Windows.Forms.Label();
+            this.cbbQualidade = new System.Windows.Forms.ComboBox();
             this.txtValorTotal = new System.Windows.Forms.TextBox();
-            this.txtValorDaGorjeta = new System.Windows.Forms.TextBox();
+            this.txtValorGorjeta = new System.Windows.Forms.TextBox();
             this.btnCalcularGorjeta = new System.Windows.Forms.Button();
             this.lblValorTotal = new System.Windows.Forms.Label();
             this.lblValorDaGorjeta = new System.Windows.Forms.Label();
@@ -41,19 +49,22 @@ namespace CalcularGorgeta
             this.txtValorDaConta = new System.Windows.Forms.TextBox();
             this.btnVoltar = new System.Windows.Forms.Button();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
-            this.cbbQualidade = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtCodigo = new System.Windows.Forms.TextBox();
             this.gpbCalculadoraGorjeta.SuspendLayout();
             this.SuspendLayout();
             // 
             // gpbCalculadoraGorjeta
             // 
+            this.gpbCalculadoraGorjeta.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.gpbCalculadoraGorjeta.Controls.Add(this.btnPesquisar);
+            this.gpbCalculadoraGorjeta.Controls.Add(this.cbbNomeFunc);
+            this.gpbCalculadoraGorjeta.Controls.Add(this.btnLimpar);
+            this.gpbCalculadoraGorjeta.Controls.Add(this.lblNome);
+            this.gpbCalculadoraGorjeta.Controls.Add(this.btnSalvar);
             this.gpbCalculadoraGorjeta.Controls.Add(this.txtCodigo);
-            this.gpbCalculadoraGorjeta.Controls.Add(this.label2);
+            this.gpbCalculadoraGorjeta.Controls.Add(this.lblCodConta);
             this.gpbCalculadoraGorjeta.Controls.Add(this.cbbQualidade);
             this.gpbCalculadoraGorjeta.Controls.Add(this.txtValorTotal);
-            this.gpbCalculadoraGorjeta.Controls.Add(this.txtValorDaGorjeta);
+            this.gpbCalculadoraGorjeta.Controls.Add(this.txtValorGorjeta);
             this.gpbCalculadoraGorjeta.Controls.Add(this.btnCalcularGorjeta);
             this.gpbCalculadoraGorjeta.Controls.Add(this.lblValorTotal);
             this.gpbCalculadoraGorjeta.Controls.Add(this.lblValorDaGorjeta);
@@ -69,26 +80,106 @@ namespace CalcularGorgeta
             this.gpbCalculadoraGorjeta.Text = "Calculadora de Gorjeta";
             this.gpbCalculadoraGorjeta.Enter += new System.EventHandler(this.gpbCalculadoraGorjeta_Enter);
             // 
+            // btnPesquisar
+            // 
+            this.btnPesquisar.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnPesquisar.Location = new System.Drawing.Point(408, 355);
+            this.btnPesquisar.Name = "btnPesquisar";
+            this.btnPesquisar.Size = new System.Drawing.Size(112, 31);
+            this.btnPesquisar.TabIndex = 18;
+            this.btnPesquisar.Text = "Pesquisar";
+            this.btnPesquisar.UseVisualStyleBackColor = false;
+            this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);
+            // 
+            // cbbNomeFunc
+            // 
+            this.cbbNomeFunc.FormattingEnabled = true;
+            this.cbbNomeFunc.Location = new System.Drawing.Point(435, 183);
+            this.cbbNomeFunc.Name = "cbbNomeFunc";
+            this.cbbNomeFunc.Size = new System.Drawing.Size(198, 28);
+            this.cbbNomeFunc.TabIndex = 17;
+            // 
+            // btnLimpar
+            // 
+            this.btnLimpar.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnLimpar.Location = new System.Drawing.Point(240, 355);
+            this.btnLimpar.Name = "btnLimpar";
+            this.btnLimpar.Size = new System.Drawing.Size(112, 31);
+            this.btnLimpar.TabIndex = 16;
+            this.btnLimpar.Text = "Limpar";
+            this.btnLimpar.UseVisualStyleBackColor = false;
+            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
+            // 
+            // lblNome
+            // 
+            this.lblNome.AutoSize = true;
+            this.lblNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNome.Location = new System.Drawing.Point(453, 147);
+            this.lblNome.Name = "lblNome";
+            this.lblNome.Size = new System.Drawing.Size(160, 20);
+            this.lblNome.TabIndex = 14;
+            this.lblNome.Text = "Nome do Funcionário";
+            // 
+            // btnSalvar
+            // 
+            this.btnSalvar.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnSalvar.Location = new System.Drawing.Point(42, 355);
+            this.btnSalvar.Name = "btnSalvar";
+            this.btnSalvar.Size = new System.Drawing.Size(160, 31);
+            this.btnSalvar.TabIndex = 12;
+            this.btnSalvar.Text = "Salvar/Cadastrar";
+            this.btnSalvar.UseVisualStyleBackColor = false;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
+            // 
+            // txtCodigo
+            // 
+            this.txtCodigo.Location = new System.Drawing.Point(435, 71);
+            this.txtCodigo.Name = "txtCodigo";
+            this.txtCodigo.Size = new System.Drawing.Size(77, 26);
+            this.txtCodigo.TabIndex = 11;
+            // 
+            // lblCodConta
+            // 
+            this.lblCodConta.AutoSize = true;
+            this.lblCodConta.Location = new System.Drawing.Point(431, 36);
+            this.lblCodConta.Name = "lblCodConta";
+            this.lblCodConta.Size = new System.Drawing.Size(89, 20);
+            this.lblCodConta.TabIndex = 10;
+            this.lblCodConta.Text = "Cod. Conta";
+            // 
+            // cbbQualidade
+            // 
+            this.cbbQualidade.FormattingEnabled = true;
+            this.cbbQualidade.Items.AddRange(new object[] {
+            "Execelente -10%",
+            "Ótimo - 8%",
+            "Bom - 5%",
+            "Ruim - 2%"});
+            this.cbbQualidade.Location = new System.Drawing.Point(42, 123);
+            this.cbbQualidade.Name = "cbbQualidade";
+            this.cbbQualidade.Size = new System.Drawing.Size(336, 28);
+            this.cbbQualidade.TabIndex = 9;
+            // 
             // txtValorTotal
             // 
-            this.txtValorTotal.Location = new System.Drawing.Point(54, 381);
+            this.txtValorTotal.Location = new System.Drawing.Point(42, 311);
             this.txtValorTotal.Name = "txtValorTotal";
-            this.txtValorTotal.Size = new System.Drawing.Size(409, 26);
+            this.txtValorTotal.Size = new System.Drawing.Size(336, 26);
             this.txtValorTotal.TabIndex = 8;
             // 
-            // txtValorDaGorjeta
+            // txtValorGorjeta
             // 
-            this.txtValorDaGorjeta.Location = new System.Drawing.Point(54, 304);
-            this.txtValorDaGorjeta.Name = "txtValorDaGorjeta";
-            this.txtValorDaGorjeta.Size = new System.Drawing.Size(409, 26);
-            this.txtValorDaGorjeta.TabIndex = 7;
+            this.txtValorGorjeta.Location = new System.Drawing.Point(42, 230);
+            this.txtValorGorjeta.Name = "txtValorGorjeta";
+            this.txtValorGorjeta.Size = new System.Drawing.Size(336, 26);
+            this.txtValorGorjeta.TabIndex = 7;
             // 
             // btnCalcularGorjeta
             // 
             this.btnCalcularGorjeta.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnCalcularGorjeta.Location = new System.Drawing.Point(108, 203);
+            this.btnCalcularGorjeta.Location = new System.Drawing.Point(69, 157);
             this.btnCalcularGorjeta.Name = "btnCalcularGorjeta";
-            this.btnCalcularGorjeta.Size = new System.Drawing.Size(320, 34);
+            this.btnCalcularGorjeta.Size = new System.Drawing.Size(273, 34);
             this.btnCalcularGorjeta.TabIndex = 6;
             this.btnCalcularGorjeta.Text = "Calcular Gorjeta";
             this.btnCalcularGorjeta.UseVisualStyleBackColor = false;
@@ -97,7 +188,7 @@ namespace CalcularGorgeta
             // lblValorTotal
             // 
             this.lblValorTotal.AutoSize = true;
-            this.lblValorTotal.Location = new System.Drawing.Point(50, 348);
+            this.lblValorTotal.Location = new System.Drawing.Point(38, 277);
             this.lblValorTotal.Name = "lblValorTotal";
             this.lblValorTotal.Size = new System.Drawing.Size(85, 20);
             this.lblValorTotal.TabIndex = 4;
@@ -106,7 +197,7 @@ namespace CalcularGorgeta
             // lblValorDaGorjeta
             // 
             this.lblValorDaGorjeta.AutoSize = true;
-            this.lblValorDaGorjeta.Location = new System.Drawing.Point(50, 251);
+            this.lblValorDaGorjeta.Location = new System.Drawing.Point(38, 207);
             this.lblValorDaGorjeta.Name = "lblValorDaGorjeta";
             this.lblValorDaGorjeta.Size = new System.Drawing.Size(121, 20);
             this.lblValorDaGorjeta.TabIndex = 3;
@@ -115,16 +206,16 @@ namespace CalcularGorgeta
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(50, 138);
+            this.label1.Location = new System.Drawing.Point(38, 100);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(162, 20);
+            this.label1.Size = new System.Drawing.Size(159, 20);
             this.label1.TabIndex = 2;
-            this.label1.Text = "Qualidade Do Serviço";
+            this.label1.Text = "Qualidade do Serviço";
             // 
             // lblValorDaConta
             // 
             this.lblValorDaConta.AutoSize = true;
-            this.lblValorDaConta.Location = new System.Drawing.Point(50, 77);
+            this.lblValorDaConta.Location = new System.Drawing.Point(38, 36);
             this.lblValorDaConta.Name = "lblValorDaConta";
             this.lblValorDaConta.Size = new System.Drawing.Size(115, 20);
             this.lblValorDaConta.TabIndex = 1;
@@ -132,9 +223,9 @@ namespace CalcularGorgeta
             // 
             // txtValorDaConta
             // 
-            this.txtValorDaConta.Location = new System.Drawing.Point(54, 100);
+            this.txtValorDaConta.Location = new System.Drawing.Point(42, 71);
             this.txtValorDaConta.Name = "txtValorDaConta";
-            this.txtValorDaConta.Size = new System.Drawing.Size(409, 26);
+            this.txtValorDaConta.Size = new System.Drawing.Size(336, 26);
             this.txtValorDaConta.TabIndex = 0;
             // 
             // btnVoltar
@@ -149,35 +240,6 @@ namespace CalcularGorgeta
             this.btnVoltar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnVoltar.UseVisualStyleBackColor = true;
             this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
-            // 
-            // cbbQualidade
-            // 
-            this.cbbQualidade.FormattingEnabled = true;
-            this.cbbQualidade.Items.AddRange(new object[] {
-            "Execelente -10%",
-            "Ótimo - 8%",
-            "Bom - 5%",
-            "Ruim - 2%"});
-            this.cbbQualidade.Location = new System.Drawing.Point(54, 169);
-            this.cbbQualidade.Name = "cbbQualidade";
-            this.cbbQualidade.Size = new System.Drawing.Size(409, 28);
-            this.cbbQualidade.TabIndex = 9;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(531, 36);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(59, 20);
-            this.label2.TabIndex = 10;
-            this.label2.Text = "Código";
-            // 
-            // txtCodigo
-            // 
-            this.txtCodigo.Location = new System.Drawing.Point(535, 71);
-            this.txtCodigo.Name = "txtCodigo";
-            this.txtCodigo.Size = new System.Drawing.Size(103, 26);
-            this.txtCodigo.TabIndex = 11;
             // 
             // frmGorjeta
             // 
@@ -202,7 +264,7 @@ namespace CalcularGorgeta
 
         private System.Windows.Forms.GroupBox gpbCalculadoraGorjeta;
         private System.Windows.Forms.TextBox txtValorTotal;
-        private System.Windows.Forms.TextBox txtValorDaGorjeta;
+        private System.Windows.Forms.TextBox txtValorGorjeta;
         private System.Windows.Forms.Button btnCalcularGorjeta;
         private System.Windows.Forms.Label lblValorTotal;
         private System.Windows.Forms.Label lblValorDaGorjeta;
@@ -212,7 +274,12 @@ namespace CalcularGorgeta
         private System.Windows.Forms.Button btnVoltar;
         private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
         private System.Windows.Forms.ComboBox cbbQualidade;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblCodConta;
         private System.Windows.Forms.TextBox txtCodigo;
+        private System.Windows.Forms.Button btnSalvar;
+        private System.Windows.Forms.Label lblNome;
+        private System.Windows.Forms.Button btnLimpar;
+        private System.Windows.Forms.ComboBox cbbNomeFunc;
+        private System.Windows.Forms.Button btnPesquisar;
     }
 }

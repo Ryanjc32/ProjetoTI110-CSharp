@@ -52,6 +52,7 @@ namespace CalcularGorgeta
             this.btnFuncionarios.TabIndex = 1;
             this.btnFuncionarios.Text = "Funcionários";
             this.btnFuncionarios.UseVisualStyleBackColor = true;
+            this.btnFuncionarios.Click += new System.EventHandler(this.btnFuncionarios_Click);
             // 
             // frmMenu
             // 

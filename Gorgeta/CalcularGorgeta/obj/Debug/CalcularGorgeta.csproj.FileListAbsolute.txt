@@ -33,3 +33,41 @@ C:\Users\ryan.jcavalcanti\Documents\Visual Studio 2019\ProjetoTI110\Gorgeta\Calc
 C:\Users\ryan.jcavalcanti\Documents\Visual Studio 2019\ProjetoTI110\Gorgeta\CalcularGorgeta\bin\Debug\System.Numerics.Vectors.xml
 C:\Users\ryan.jcavalcanti\Documents\Visual Studio 2019\ProjetoTI110\Gorgeta\CalcularGorgeta\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\ryan.jcavalcanti\Documents\Visual Studio 2019\ProjetoTI110\Gorgeta\CalcularGorgeta\obj\Debug\CalcularGorgeta.csproj.CopyComplete
+C:\Users\Ryan\Documents\C#\ProjetoTI110-CSharp\Gorgeta\CalcularGorgeta\bin\Debug\CalcularGorgeta.exe.config
+C:\Users\Ryan\Documents\C#\ProjetoTI110-CSharp\Gorgeta\CalcularGorgeta\bin\Debug\CalcularGorgeta.exe
+C:\Users\Ryan\Documents\C#\ProjetoTI110-CSharp\Gorgeta\CalcularGorgeta\bin\Debug\CalcularGorgeta.pdb
+C:\Users\Ryan\Documents\C#\ProjetoTI110-CSharp\Gorgeta\CalcularGorgeta\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\Ryan\Documents\C#\ProjetoTI110-CSharp\Gorgeta\CalcularGorgeta\bin\Debug\Google.Protobuf.dll
+C:\Users\Ryan\Documents\C#\ProjetoTI110-CSharp\Gorgeta\CalcularGorgeta\bin\Debug\K4os.Compression.LZ4.dll
+C:\Users\Ryan\Documents\C#\ProjetoTI110-CSharp\Gorgeta\CalcularGorgeta\bin\Debug\K4os.Compression.LZ4.Streams.dll
+C:\Users\Ryan\Documents\C#\ProjetoTI110-CSharp\Gorgeta\CalcularGorgeta\bin\Debug\K4os.Hash.xxHash.dll
+C:\Users\Ryan\Documents\C#\ProjetoTI110-CSharp\Gorgeta\CalcularGorgeta\bin\Debug\MySql.Data.dll
+C:\Users\Ryan\Documents\C#\ProjetoTI110-CSharp\Gorgeta\CalcularGorgeta\bin\Debug\System.Buffers.dll
+C:\Users\Ryan\Documents\C#\ProjetoTI110-CSharp\Gorgeta\CalcularGorgeta\bin\Debug\System.Memory.dll
+C:\Users\Ryan\Documents\C#\ProjetoTI110-CSharp\Gorgeta\CalcularGorgeta\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\Ryan\Documents\C#\ProjetoTI110-CSharp\Gorgeta\CalcularGorgeta\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Ryan\Documents\C#\ProjetoTI110-CSharp\Gorgeta\CalcularGorgeta\bin\Debug\ZstdNet.dll
+C:\Users\Ryan\Documents\C#\ProjetoTI110-CSharp\Gorgeta\CalcularGorgeta\bin\Debug\BouncyCastle.Crypto.xml
+C:\Users\Ryan\Documents\C#\ProjetoTI110-CSharp\Gorgeta\CalcularGorgeta\bin\Debug\Google.Protobuf.pdb
+C:\Users\Ryan\Documents\C#\ProjetoTI110-CSharp\Gorgeta\CalcularGorgeta\bin\Debug\Google.Protobuf.xml
+C:\Users\Ryan\Documents\C#\ProjetoTI110-CSharp\Gorgeta\CalcularGorgeta\bin\Debug\K4os.Compression.LZ4.xml
+C:\Users\Ryan\Documents\C#\ProjetoTI110-CSharp\Gorgeta\CalcularGorgeta\bin\Debug\K4os.Compression.LZ4.Streams.xml
+C:\Users\Ryan\Documents\C#\ProjetoTI110-CSharp\Gorgeta\CalcularGorgeta\bin\Debug\K4os.Hash.xxHash.xml
+C:\Users\Ryan\Documents\C#\ProjetoTI110-CSharp\Gorgeta\CalcularGorgeta\bin\Debug\MySql.Data.xml
+C:\Users\Ryan\Documents\C#\ProjetoTI110-CSharp\Gorgeta\CalcularGorgeta\bin\Debug\System.Buffers.xml
+C:\Users\Ryan\Documents\C#\ProjetoTI110-CSharp\Gorgeta\CalcularGorgeta\bin\Debug\System.Memory.xml
+C:\Users\Ryan\Documents\C#\ProjetoTI110-CSharp\Gorgeta\CalcularGorgeta\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\Ryan\Documents\C#\ProjetoTI110-CSharp\Gorgeta\CalcularGorgeta\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\Ryan\Documents\C#\ProjetoTI110-CSharp\Gorgeta\CalcularGorgeta\obj\Debug\CalcularGorgeta.csproj.AssemblyReference.cache
+C:\Users\Ryan\Documents\C#\ProjetoTI110-CSharp\Gorgeta\CalcularGorgeta\obj\Debug\CalcularGorgeta.Form1.resources
+C:\Users\Ryan\Documents\C#\ProjetoTI110-CSharp\Gorgeta\CalcularGorgeta\obj\Debug\CalcularGorgeta.frmGorjeta.resources
+C:\Users\Ryan\Documents\C#\ProjetoTI110-CSharp\Gorgeta\CalcularGorgeta\obj\Debug\CalcularGorgeta.frmMenu.resources
+C:\Users\Ryan\Documents\C#\ProjetoTI110-CSharp\Gorgeta\CalcularGorgeta\obj\Debug\CalcularGorgeta.Properties.Resources.resources
+C:\Users\Ryan\Documents\C#\ProjetoTI110-CSharp\Gorgeta\CalcularGorgeta\obj\Debug\CalcularGorgeta.csproj.GenerateResource.cache
+C:\Users\Ryan\Documents\C#\ProjetoTI110-CSharp\Gorgeta\CalcularGorgeta\obj\Debug\CalcularGorgeta.csproj.CoreCompileInputs.cache
+C:\Users\Ryan\Documents\C#\ProjetoTI110-CSharp\Gorgeta\CalcularGorgeta\obj\Debug\CalcularGorgeta.csproj.CopyComplete
+C:\Users\Ryan\Documents\C#\ProjetoTI110-CSharp\Gorgeta\CalcularGorgeta\obj\Debug\CalcularGorgeta.exe
+C:\Users\Ryan\Documents\C#\ProjetoTI110-CSharp\Gorgeta\CalcularGorgeta\obj\Debug\CalcularGorgeta.pdb
+C:\Users\Ryan\Documents\C#\ProjetoTI110-CSharp\Gorgeta\CalcularGorgeta\obj\Debug\CalcularGorgeta.frmFuncionarios.resources
+C:\Users\ryan.jcavalcanti\Documents\Visual Studio 2019\ProjetoTI110\Gorgeta\CalcularGorgeta\obj\Debug\CalcularGorgeta.frmFuncionarios.resources
+C:\Users\ryan.jcavalcanti\Documents\Visual Studio 2019\ProjetoTI110\Gorgeta\CalcularGorgeta\obj\Debug\CalcularGorgeta.frmPesquisar.resources
