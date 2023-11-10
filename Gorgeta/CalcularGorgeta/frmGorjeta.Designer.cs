@@ -93,6 +93,7 @@ namespace CalcularGorgeta
             // 
             // cbbNomeFunc
             // 
+            this.cbbNomeFunc.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbNomeFunc.FormattingEnabled = true;
             this.cbbNomeFunc.Location = new System.Drawing.Point(435, 183);
             this.cbbNomeFunc.Name = "cbbNomeFunc";
@@ -134,6 +135,7 @@ namespace CalcularGorgeta
             // txtCodigo
             // 
             this.txtCodigo.Location = new System.Drawing.Point(435, 71);
+            this.txtCodigo.MaxLength = 8;
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(77, 26);
             this.txtCodigo.TabIndex = 11;
@@ -149,6 +151,7 @@ namespace CalcularGorgeta
             // 
             // cbbQualidade
             // 
+            this.cbbQualidade.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbQualidade.FormattingEnabled = true;
             this.cbbQualidade.Items.AddRange(new object[] {
             "Execelente -10%",
@@ -224,6 +227,7 @@ namespace CalcularGorgeta
             // txtValorDaConta
             // 
             this.txtValorDaConta.Location = new System.Drawing.Point(42, 71);
+            this.txtValorDaConta.MaxLength = 50;
             this.txtValorDaConta.Name = "txtValorDaConta";
             this.txtValorDaConta.Size = new System.Drawing.Size(336, 26);
             this.txtValorDaConta.TabIndex = 0;

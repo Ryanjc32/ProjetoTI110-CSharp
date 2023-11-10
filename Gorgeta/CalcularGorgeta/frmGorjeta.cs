@@ -51,43 +51,49 @@ namespace CalcularGorgeta
 
         private void btnCalcularGorjeta_Click(object sender, EventArgs e)
         {
-            try
+            if (txtValorDaConta.Text.Equals("") || cbbQualidade.Text.Equals("") || cbbNomeFunc.Text.Equals("")) //Verificar se caixa valor da conta está vazia
             {
-                double valor = Convert.ToInt32(txtValorDaConta.Text);
-                if (cbbQualidade.SelectedIndex == 0)
-                {
-                    txtValorGorjeta.Text = Convert.ToString(valor * 0.10);
-                    txtValorTotal.Text = Convert.ToString(valor + (valor * 0.10));
-
-                }
-                if (cbbQualidade.SelectedIndex == 1)
-                {
-                    txtValorGorjeta.Text = Convert.ToString(valor * 0.08);
-                    txtValorTotal.Text = Convert.ToString(valor + (valor * 0.08));
-
-                }
-                if (cbbQualidade.SelectedIndex == 2)
-                {
-                    txtValorGorjeta.Text = Convert.ToString(valor * 0.05);
-                    txtValorTotal.Text = Convert.ToString(valor + (valor * 0.05));
-
-                }
-                if (cbbQualidade.SelectedIndex == 3)
-                {
-                    txtValorGorjeta.Text = Convert.ToString(valor * 0.02);
-                    txtValorTotal.Text = Convert.ToString(valor + (valor * 0.02));
-
-                }
-                desabilitarCampos();
-                habilitarCampos();
-                
-
+                MessageBox.Show("Preencha todos os campos!", "Mensagem do Sistema", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
             }
-            catch
+            else
             {
-                MessageBox.Show("Selecione os campos acima!!!", "Mensagem do Sistema", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
+                try
+                {
+                    double valor = Convert.ToInt32(txtValorDaConta.Text);
+                    if (cbbQualidade.SelectedIndex == 0)
+                    {
+                        txtValorGorjeta.Text = Convert.ToString(valor * 0.10);
+                        txtValorTotal.Text = Convert.ToString(valor + (valor * 0.10));
+
+                    }
+                    if (cbbQualidade.SelectedIndex == 1)
+                    {
+                        txtValorGorjeta.Text = Convert.ToString(valor * 0.08);
+                        txtValorTotal.Text = Convert.ToString(valor + (valor * 0.08));
+
+                    }
+                    if (cbbQualidade.SelectedIndex == 2)
+                    {
+                        txtValorGorjeta.Text = Convert.ToString(valor * 0.05);
+                        txtValorTotal.Text = Convert.ToString(valor + (valor * 0.05));
+
+                    }
+                    if (cbbQualidade.SelectedIndex == 3)
+                    {
+                        txtValorGorjeta.Text = Convert.ToString(valor * 0.02);
+                        txtValorTotal.Text = Convert.ToString(valor + (valor * 0.02));
+
+                    }
+                    desabilitarCampos();
+                    habilitarCampos();
+                }
+                catch (FormatException)
+                {
+                    MessageBox.Show("Digite apenas números!", "Mensagem do Sistema", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
+                }
             }
         }
+
 
         //Limpar Campos
 
@@ -103,17 +109,26 @@ namespace CalcularGorgeta
         //carrega código
         public void carregaCodigo()
         {
-            MySqlCommand comm = new MySqlCommand();
-            comm.CommandText = "select codConta+1 from tbGorjeta order by codConta desc;";
-            comm.CommandType = CommandType.Text;
+            try
+            {
+                MySqlCommand comm = new MySqlCommand();
+                comm.CommandText = "select codConta+1 from tbGorjeta order by codConta desc;";
+                comm.CommandType = CommandType.Text;
 
-            comm.Connection = frmConexao.obterConexao();
-            MySqlDataReader DR = comm.ExecuteReader();
+                comm.Connection = frmConexao.obterConexao();
+                MySqlDataReader DR = comm.ExecuteReader();
+
+                DR.Read();
+                txtCodigo.Text = Convert.ToString(DR.GetString(0));
+
+                frmConexao.fecharConexao();
+            }
+            catch (Exception)
+            {
+                txtCodigo.Text = "1";
+                
+            }
            
-            DR.Read();
-            txtCodigo.Text = Convert.ToString(DR.GetString(0));
-
-            frmConexao.fecharConexao();
 
         }
         // Salvar no Banco de Dados
@@ -174,20 +189,6 @@ namespace CalcularGorgeta
             comm.ExecuteNonQuery();
 
             frmConexao.fecharConexao();
-        }
-
-        private void btnExcluir_Click(object sender, EventArgs e)
-        {
-            DialogResult resp = MessageBox.Show("Deseja excluir?", "Mensagem do Sistema", MessageBoxButtons.YesNo, MessageBoxIcon.Information, MessageBoxDefaultButton.Button2);
-            if ( resp == DialogResult.Yes)
-            {
-                excluirCodConta(Convert.ToInt32(txtCodigo.Text));
-                limparCampos();
-            }
-            else
-            {
-
-            }
         }
 
         private void btnLimpar_Click(object sender, EventArgs e)

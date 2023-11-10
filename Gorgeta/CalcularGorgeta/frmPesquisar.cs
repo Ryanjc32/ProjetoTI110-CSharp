@@ -17,6 +17,8 @@ namespace CalcularGorgeta
         {
             InitializeComponent();
             pesquisarNome();
+            desabilitarCampos();
+            habilitarCampos();
         }
 
         private void btnVoltar_Click(object sender, EventArgs e)
@@ -28,9 +30,23 @@ namespace CalcularGorgeta
 
         private void btnPesquisar_Click(object sender, EventArgs e)
         {
-            
             pesquisar();
         }
+
+        //Desabilitar Campos
+        public void desabilitarCampos()
+        {
+            btnCalcular.Enabled = false;
+            txtValorTotal.Enabled = false;
+        }
+
+        //Habilitar Campos
+        public void habilitarCampos()
+        {
+            btnCalcular.Enabled = true;
+        }
+
+
         //Limpar Campos
         public void limparCampos()
         {

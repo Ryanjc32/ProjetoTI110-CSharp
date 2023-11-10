@@ -29,25 +29,14 @@ namespace CalcularGorgeta
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmFuncionarios));
-            this.button1 = new System.Windows.Forms.Button();
             this.lblNomeFunc = new System.Windows.Forms.Label();
             this.lblSenha = new System.Windows.Forms.Label();
             this.lblNome = new System.Windows.Forms.Label();
             this.txtNomeFunc = new System.Windows.Forms.TextBox();
             this.txtSenha = new System.Windows.Forms.TextBox();
-            this.bntCadastrar = new System.Windows.Forms.Button();
+            this.btnCadastrar = new System.Windows.Forms.Button();
             this.btnVoltar = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(596, 443);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(8, 8);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
             // 
             // lblNomeFunc
             // 
@@ -61,7 +50,7 @@ namespace CalcularGorgeta
             // 
             this.lblSenha.AutoSize = true;
             this.lblSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSenha.Location = new System.Drawing.Point(67, 169);
+            this.lblSenha.Location = new System.Drawing.Point(134, 170);
             this.lblSenha.Name = "lblSenha";
             this.lblSenha.Size = new System.Drawing.Size(60, 18);
             this.lblSenha.TabIndex = 2;
@@ -71,7 +60,7 @@ namespace CalcularGorgeta
             // 
             this.lblNome.AutoSize = true;
             this.lblNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNome.Location = new System.Drawing.Point(66, 50);
+            this.lblNome.Location = new System.Drawing.Point(133, 79);
             this.lblNome.Name = "lblNome";
             this.lblNome.Size = new System.Drawing.Size(146, 20);
             this.lblNome.TabIndex = 3;
@@ -79,35 +68,41 @@ namespace CalcularGorgeta
             // 
             // txtNomeFunc
             // 
-            this.txtNomeFunc.Location = new System.Drawing.Point(70, 95);
+            this.txtNomeFunc.Location = new System.Drawing.Point(137, 126);
+            this.txtNomeFunc.MaxLength = 30;
             this.txtNomeFunc.Name = "txtNomeFunc";
             this.txtNomeFunc.Size = new System.Drawing.Size(242, 20);
             this.txtNomeFunc.TabIndex = 4;
+            this.txtNomeFunc.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtNomeFunc_KeyDown);
             // 
             // txtSenha
             // 
-            this.txtSenha.Location = new System.Drawing.Point(70, 205);
+            this.txtSenha.Font = new System.Drawing.Font("Wingdings", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.txtSenha.Location = new System.Drawing.Point(137, 214);
+            this.txtSenha.MaxLength = 11;
             this.txtSenha.Name = "txtSenha";
+            this.txtSenha.PasswordChar = 'l';
             this.txtSenha.Size = new System.Drawing.Size(242, 20);
             this.txtSenha.TabIndex = 5;
+            this.txtSenha.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSenha_KeyDown);
             // 
-            // bntCadastrar
+            // btnCadastrar
             // 
-            this.bntCadastrar.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.bntCadastrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bntCadastrar.Location = new System.Drawing.Point(53, 347);
-            this.bntCadastrar.Name = "bntCadastrar";
-            this.bntCadastrar.Size = new System.Drawing.Size(159, 54);
-            this.bntCadastrar.TabIndex = 8;
-            this.bntCadastrar.Text = "Salvar Cadastro";
-            this.bntCadastrar.UseVisualStyleBackColor = false;
-            this.bntCadastrar.Click += new System.EventHandler(this.bntCadastrar_Click);
+            this.btnCadastrar.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnCadastrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCadastrar.Location = new System.Drawing.Point(178, 335);
+            this.btnCadastrar.Name = "btnCadastrar";
+            this.btnCadastrar.Size = new System.Drawing.Size(159, 54);
+            this.btnCadastrar.TabIndex = 8;
+            this.btnCadastrar.Text = "Salvar Cadastro";
+            this.btnCadastrar.UseVisualStyleBackColor = false;
+            this.btnCadastrar.Click += new System.EventHandler(this.bntCadastrar_Click);
             // 
             // btnVoltar
             // 
             this.btnVoltar.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnVoltar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVoltar.Location = new System.Drawing.Point(282, 347);
+            this.btnVoltar.Location = new System.Drawing.Point(376, 335);
             this.btnVoltar.Name = "btnVoltar";
             this.btnVoltar.Size = new System.Drawing.Size(115, 54);
             this.btnVoltar.TabIndex = 9;
@@ -121,15 +116,13 @@ namespace CalcularGorgeta
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 461);
             this.Controls.Add(this.btnVoltar);
-            this.Controls.Add(this.bntCadastrar);
+            this.Controls.Add(this.btnCadastrar);
             this.Controls.Add(this.txtSenha);
             this.Controls.Add(this.txtNomeFunc);
             this.Controls.Add(this.lblNome);
             this.Controls.Add(this.lblSenha);
             this.Controls.Add(this.lblNomeFunc);
-            this.Controls.Add(this.button1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "frmFuncionarios";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -140,14 +133,12 @@ namespace CalcularGorgeta
         }
 
         #endregion
-
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label lblNomeFunc;
         private System.Windows.Forms.Label lblSenha;
         private System.Windows.Forms.Label lblNome;
         private System.Windows.Forms.TextBox txtNomeFunc;
         private System.Windows.Forms.TextBox txtSenha;
-        private System.Windows.Forms.Button bntCadastrar;
+        private System.Windows.Forms.Button btnCadastrar;
         private System.Windows.Forms.Button btnVoltar;
     }
 }
