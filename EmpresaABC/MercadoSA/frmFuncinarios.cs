@@ -254,7 +254,7 @@ namespace MercadoSA
 
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
-            if (txtNome.Text.Equals("") || txtEmail.Text.Equals("") || txtEndereco.Text.Equals("") || txtNumero.Text.Equals("") || 
+              if (txtNome.Text.Equals("") || txtEmail.Text.Equals("") || txtEndereco.Text.Equals("") || txtNumero.Text.Equals("") || 
                 txtBairro.Text.Equals("") || txtCidade.Text.Equals("") || mskCPF.Text.Equals("   .   .   -") || mskCEP.Text.Equals("      -") ||
                 cbbEstado.Text.Equals(""))
             {

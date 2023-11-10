@@ -142,7 +142,6 @@ namespace CalcularGorgeta
 
         private void btnSalvar_Click(object sender, EventArgs e)
         {
-
             if (txtCodigo.Text.Equals("") || txtValorGorjeta.Text.Equals("") || txtValorTotal.Text.Equals("") || txtValorDaConta.Text.Equals("") || cbbQualidade.SelectedIndex.Equals(-1) || cbbNomeFunc.SelectedIndex.Equals(-1))
             {
                 MessageBox.Show("Favor preencher os campos!!!", "Menssagem do sistema", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
@@ -160,7 +159,8 @@ namespace CalcularGorgeta
                 limparCampos();
             }
 
-            }
+        }
+
         public void excluirCodConta(int codigo)
         {
             MySqlCommand comm = new MySqlCommand();
@@ -194,7 +194,7 @@ namespace CalcularGorgeta
         {
             limparCampos();
         }
-        //carrega nome
+
         public void pesquisarNome()
         {
             MySqlCommand comm = new MySqlCommand();

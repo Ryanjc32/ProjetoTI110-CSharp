@@ -69,5 +69,8 @@ C:\Users\Ryan\Documents\C#\ProjetoTI110-CSharp\Gorgeta\CalcularGorgeta\obj\Debug
 C:\Users\Ryan\Documents\C#\ProjetoTI110-CSharp\Gorgeta\CalcularGorgeta\obj\Debug\CalcularGorgeta.exe
 C:\Users\Ryan\Documents\C#\ProjetoTI110-CSharp\Gorgeta\CalcularGorgeta\obj\Debug\CalcularGorgeta.pdb
 C:\Users\Ryan\Documents\C#\ProjetoTI110-CSharp\Gorgeta\CalcularGorgeta\obj\Debug\CalcularGorgeta.frmFuncionarios.resources
+<<<<<<< HEAD
 C:\Users\ryan.jcavalcanti\Documents\Visual Studio 2019\ProjetoTI110\Gorgeta\CalcularGorgeta\obj\Debug\CalcularGorgeta.frmFuncionarios.resources
 C:\Users\ryan.jcavalcanti\Documents\Visual Studio 2019\ProjetoTI110\Gorgeta\CalcularGorgeta\obj\Debug\CalcularGorgeta.frmPesquisar.resources
+=======
+>>>>>>> 6bdaa3d1a835ba68d6405a07dda2ca9e8ba63942
